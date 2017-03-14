@@ -1,7 +1,9 @@
+/*global jQuery $*/
+
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import '../node_modules/jquery/dist/jquery.min'
 class App extends Component {
     constructor(props) {
         super(props);
@@ -48,14 +50,14 @@ class App extends Component {
     bButton() {
         var self = this;
         return (
-            <button className="btn btn-info" id="b" onClick={self.pressBButton}>/b/</button>
+            <button className="btn btn-info choiceButton" id="b" onClick={self.pressBButton}>/b/</button>
         )
     }
 
     pButton() {
         var self = this;
         return (
-            <button className="btn btn-info" id="p" onClick={self.pressPButton}>/p/</button>
+            <button className="btn btn-info choiceButton" id="p" onClick={self.pressPButton}>/p/</button>
         )
     }
 
@@ -87,6 +89,7 @@ class App extends Component {
     }
 
     experimentOneSetup() {
+        $('.experimentTwo').hide();
         let self = this;
         let array = [];
         let sounds = this.state.sounds;
@@ -116,6 +119,8 @@ class App extends Component {
     }
 
     advanceExperimentOne(answer) {
+        $(".choiceButton").hide();
+
         let current = this.state.experimentOneResults;
         let obj = current[this.state.question];
         obj.answer = answer;
@@ -127,6 +132,9 @@ class App extends Component {
     }
 
     runExperimentOne() {
+        $('.experimentTwo').hide();
+        $('.startButton').hide();
+
         let question = this.state.question || 0;
         if (question < this.state.experimentOne.length) {
             this.experimentOnePlay(question);
@@ -145,7 +153,8 @@ class App extends Component {
     }
 
     experimentOnePlay(question) {
-        console.log('experiment1');
+        $(".choiceButton").hide();
+
         let audio = this.state.experimentOne[question];
         let audio2 = null;
         //TODO: add ended event
@@ -164,6 +173,7 @@ class App extends Component {
                 audio2.onended = function () {
                     audio.onend = null;
                     audio2.onend = null;
+                    $(".choiceButton").show();
                 }
                 audio2.play();
             };
@@ -269,20 +279,24 @@ class App extends Component {
                     <h2>Jongman Categorical Perception Experiment</h2>
                 </div>
                 <div className="App-intro container">
+                    <div className="well experimentOne">
                     <h1>Experiment One - Identification</h1>
                     <p>In this first experiment, you will hear a and array of stimuli in two sequence pairs. Once you've
                         heard both sounds in a pair, simply choose the one that sounds closest to the phoneme /p/. The
                         experiment will automatically advanced to the next set of stimuli. </p>
                     Click 'Start' to begin the first experiment.
                     <br />
-                    <button className="btn btn-primary" onClick={this.start}>Start The Identification Experiment
+                    <button className="btn btn-primary startButton" onClick={this.start}>Start The Identification Experiment
                     </button>
+                    </div>
+                    <div className="well experimentTwo">
                     <h1>Experiment Two - Discrimination</h1>
                     <p>In this section you will hear two stimuli back to back and you are you to determine whether or
                         not they sound the 'same' or 'different.'</p>
                     <br />
                     <button className="btn btn-primary" onClick={this.start}>Start the Discrimination Experiment
                     </button>
+                    </div>
                 </div>
 
                 <br />

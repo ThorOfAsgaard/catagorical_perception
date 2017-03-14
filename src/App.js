@@ -17,7 +17,7 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: false,
+            experimentOneDone: true, //reset to false
             experimentTwoDone: false,
         };
         this.start = this.start.bind(this);
@@ -29,7 +29,6 @@ class App extends Component {
         this.pressDifferentButton = this.pressDifferentButton.bind(this);
 
 
-
     }
 
     getAssets() {
@@ -39,7 +38,7 @@ class App extends Component {
         for (let i = 1; i < num; i++) {
             let a = document.createElement('audio');
             a.src = './wavs/' + this.state.soundPrefix + i + '.wav';
-            a.id = this.state.soundPrefix+i;
+            a.id = this.state.soundPrefix + i;
             a.load();
 
 
@@ -63,16 +62,19 @@ class App extends Component {
             <button className="btn btn-info choiceButton" id="p" onClick={self.pressPButton}>/p/</button>
         )
     }
+
     sameButton() {
-        let self=this;
+        let self = this;
         return (
             <button className="btn btn-info choiceButton" id="same" onClick={self.pressSameButton}>Same</button>
         )
     }
+
     differentButton() {
-        let self=this;
+        let self = this;
         return (
-            <button className="btn btn-info choiceButton" id="different" onClick={self.pressDifferentButton}>Different</button>
+            <button className="btn btn-info choiceButton" id="different" onClick={self.pressDifferentButton}>
+                Different</button>
         )
     }
 
@@ -93,7 +95,7 @@ class App extends Component {
         if (!this.state.experimentOneDone) {
             this.setState({running: true});
             this.experimentOneSetup();
-        } else if(this.state.experimentOneDone && ! this.state.experimentTwoDone) {
+        } else if (this.state.experimentOneDone && !this.state.experimentTwoDone) {
             this.setState({running: true});
             this.experimentTwoSetup();
             //Run experiment two
@@ -128,13 +130,17 @@ class App extends Component {
     }
 
     experimentTwoSetup() {
+        var self = this;
         /*
-        Two stimuli, click 'same' or 'different', always separated by one vot
-        EG: 1:3, 2:4, etc.
-        separated by 250ms,
-        5 repetisions of each pair
+         Two stimuli, click 'same' or 'different', always separated by one vot
+         EG: 1:3, 2:4, etc.
+         separated by 250ms,
+         5 repetisions of each pair
 
          */
+        self.createPairs(this.state.sounds, function(ret) {
+            console.log(ret);
+        })
     }
 
     pressBButton() {
@@ -144,18 +150,22 @@ class App extends Component {
     pressPButton() {
         this.advanceExperimentOne("/p/");
     }
+
     pressSameButton() {
         this.advanceExperimentTwo(true);
     }
+
     pressDifferentButton() {
         this.advanceExperimentTwo(false);
 
     }
+
     advanceExperimentTwo(val) {
         /**
          * Store
          */
     }
+
     advanceExperimentOne(answer) {
         $(".choiceButton").hide();
 
@@ -178,7 +188,7 @@ class App extends Component {
             this.experimentOnePlay(question);
 
         } else {
-            this.setState({running: false}, function () {
+            this.setState({running: false, experimentOneDone:true}, function () {
 
                 console.log(this.state.experimentOneResults);
 
@@ -219,7 +229,6 @@ class App extends Component {
         });
 
 
-
     }
 
     experimentTwo() {
@@ -240,8 +249,14 @@ class App extends Component {
         let newArray = [];
         for (let obj in array) {
 
-            for (let i = 0; i < 10; i++) {
-                obj.sound2 = self.state.sounds[i].src;
+            for (let i = 0; i < this.state.sounds.length; i++) {
+
+                if (i + 2 > this.state.sounds.length) {
+                    obj.sound2 = this.state.sounds.length[this.state.sounds.length - i];
+                } else {
+                    obj.sound2 = self.state.sounds[i].src;
+                }
+
 
                 newArray.push(obj);
 
@@ -256,6 +271,7 @@ class App extends Component {
     charts() {
         //TODO: Install ReCharts
     }
+
     createPermutations(array, callback) {
         let returnArray = [];
         array.map(function (obj) {
@@ -313,6 +329,28 @@ class App extends Component {
     render() {
         let self = this;
         let buttons = (self.state.running) ? [self.pButton(), self.bButton()] : null;
+        let experimentOneShow = !this.state.experimentOneDone? [  <div className="well experimentOne">
+                <h1>Experiment One - Identification</h1>
+                <p>In this first experiment, you will hear a and array of stimuli in two sequence pairs. Once
+                    you've
+                    heard both sounds in a pair, simply choose the one that sounds closest to the phoneme /p/.
+                    The
+                    experiment will automatically advanced to the next set of stimuli. </p>
+                Click 'Start' to begin the first experiment.
+                <br />
+                <button className="btn btn-primary startButton" onClick={this.start}>Start The Identification
+                    Experiment
+                </button>
+            </div>] : null;
+        let experimentTwoShow = this.state.experimentOneDone ? [<div className="well experimentTwo">
+                <h1>Experiment Two - Discrimination</h1>
+                <p>In this section you will hear two stimuli back to back and you are you to determine whether
+                    or
+                    not they sound the 'same' or 'different.'</p>
+                <br />
+                <button className="btn btn-primary" onClick={this.start}>Start the Discrimination Experiment
+                </button>
+            </div>] : null;
         return (
             <div className="App container">
                 <div className="App-header">
@@ -320,24 +358,10 @@ class App extends Component {
                     <h2>Jongman Categorical Perception Experiment</h2>
                 </div>
                 <div className="App-intro container">
-                    <div className="well experimentOne">
-                    <h1>Experiment One - Identification</h1>
-                    <p>In this first experiment, you will hear a and array of stimuli in two sequence pairs. Once you've
-                        heard both sounds in a pair, simply choose the one that sounds closest to the phoneme /p/. The
-                        experiment will automatically advanced to the next set of stimuli. </p>
-                    Click 'Start' to begin the first experiment.
-                    <br />
-                    <button className="btn btn-primary startButton" onClick={this.start}>Start The Identification Experiment
-                    </button>
-                    </div>
-                    <div className="well experimentTwo">
-                    <h1>Experiment Two - Discrimination</h1>
-                    <p>In this section you will hear two stimuli back to back and you are you to determine whether or
-                        not they sound the 'same' or 'different.'</p>
-                    <br />
-                    <button className="btn btn-primary" onClick={this.start}>Start the Discrimination Experiment
-                    </button>
-                    </div>
+                    {experimentOneShow}
+
+                    {experimentTwoShow}
+
                 </div>
 
                 <br />

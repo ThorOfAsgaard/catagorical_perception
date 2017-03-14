@@ -17,7 +17,7 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: true, //reset to false
+            experimentOneDone: false, //reset to false
             experimentTwoDone: false,
         };
         this.start = this.start.bind(this);
@@ -419,7 +419,7 @@ class App extends Component {
                     or
                     not they sound the 'same' or 'different.'</p>
                 <br />
-                <button className="btn btn-primary" onClick={this.start}>Start the Discrimination Experiment
+                <button className="btn btn-primary startButton" onClick={this.start}>Start the Discrimination Experiment
                 </button>
             </div>] : null;
         return (

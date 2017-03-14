@@ -413,7 +413,7 @@ class App extends Component {
                     Experiment
                 </button>
             </div>] : null;
-        let experimentTwoShow = this.state.experimentOneDone ? [<div className="well experimentTwo">
+        let experimentTwoShow = (this.state.experimentOneDone && !this.state.experimentTwoDone)? [<div className="well experimentTwo">
                 <h1>Experiment Two - Discrimination</h1>
                 <p>In this section you will hear two stimuli back to back and you are you to determine whether
                     or
@@ -422,6 +422,16 @@ class App extends Component {
                 <button className="btn btn-primary startButton" onClick={this.start}>Start the Discrimination Experiment
                 </button>
             </div>] : null;
+            let finished = (this.state.experimentOneDone && this.state.experimentTwoDone) ? [
+                    <div className="jumbotron">
+                        <h2>Experiments complete</h2>
+
+                        Charts will be here soon
+
+                    </div>
+
+
+                ] : null;
         return (
             <div className="App container">
                 <div className="App-header">
@@ -433,6 +443,7 @@ class App extends Component {
 
                     {experimentTwoShow}
 
+                    {finished}
                 </div>
 
                 <br />

@@ -18,7 +18,7 @@ class App extends Component {
             sounds: [],
             running: false,
             experimentOneDone: false,
-            experimentTowDone: false,
+            experimentTwoDone: false,
         };
         this.start = this.start.bind(this);
         this.experimentOneSetup = this.experimentOneSetup.bind(this);
@@ -78,12 +78,12 @@ class App extends Component {
         if (!this.state.experimentOneDone) {
             this.setState({running: true});
             this.experimentOneSetup();
+        } else if(this.state.ExperimentOneDone && ! this.state.experimentTwoDone) {
+            //Run experiment two
+
         } else {
-
+            //Show charts
         }
-
-        // console.log(this.createPermutations(this.state.sounds, self.createPairs));
-        // console.log(self.createPairs(this.createPermutations(this.state.sounds)));
 
 
     }
@@ -108,6 +108,16 @@ class App extends Component {
 
         console.log('run');
 
+    }
+
+    experimentTwoSetup() {
+        /*
+        Two stimuli, click 'same' or 'different', always separated by one vot
+        EG: 1:3, 2:4, etc.
+        separated by 250ms,
+        5 repetisions of each pair
+
+         */
     }
 
     pressBButton() {
@@ -215,6 +225,9 @@ class App extends Component {
 
     }
 
+    charts() {
+        //TODO: Install ReCharts
+    }
     createPermutations(array, callback) {
         let returnArray = [];
         array.map(function (obj) {

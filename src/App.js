@@ -25,6 +25,9 @@ class App extends Component {
         this.advanceExperimentOne = this.advanceExperimentOne.bind(this);
         this.pressBButton = this.pressBButton.bind(this);
         this.pressPButton = this.pressPButton.bind(this);
+        this.pressSameButton = this.pressSameButton.bind(this);
+        this.pressDifferentButton = this.pressDifferentButton.bind(this);
+
 
 
     }
@@ -48,16 +51,28 @@ class App extends Component {
     }
 
     bButton() {
-        var self = this;
+        let self = this;
         return (
             <button className="btn btn-info choiceButton" id="b" onClick={self.pressBButton}>/b/</button>
         )
     }
 
     pButton() {
-        var self = this;
+        let self = this;
         return (
             <button className="btn btn-info choiceButton" id="p" onClick={self.pressPButton}>/p/</button>
+        )
+    }
+    sameButton() {
+        let self=this;
+        return (
+            <button className="btn btn-info choiceButton" id="same" onClick={self.pressSameButton}>Same</button>
+        )
+    }
+    differentButton() {
+        let self=this;
+        return (
+            <button className="btn btn-info choiceButton" id="different" onClick={self.pressDifferentButton}>Different</button>
         )
     }
 
@@ -78,7 +93,9 @@ class App extends Component {
         if (!this.state.experimentOneDone) {
             this.setState({running: true});
             this.experimentOneSetup();
-        } else if(this.state.ExperimentOneDone && ! this.state.experimentTwoDone) {
+        } else if(this.state.experimentOneDone && ! this.state.experimentTwoDone) {
+            this.setState({running: true});
+            this.experimentTwoSetup();
             //Run experiment two
 
         } else {
@@ -94,8 +111,8 @@ class App extends Component {
         let array = [];
         let sounds = this.state.sounds;
         let repetitions = this.props.experimentOneRepetitions || 1
-        for (var i = 0; i < repetitions; i++) {
-            for (var x = 0; x < sounds.length; x++) {
+        for (let i = 0; i < repetitions; i++) {
+            for (let x = 0; x < sounds.length; x++) {
                 array.push(sounds[x]);
             }
         }
@@ -127,7 +144,18 @@ class App extends Component {
     pressPButton() {
         this.advanceExperimentOne("/p/");
     }
+    pressSameButton() {
+        this.advanceExperimentTwo(true);
+    }
+    pressDifferentButton() {
+        this.advanceExperimentTwo(false);
 
+    }
+    advanceExperimentTwo(val) {
+        /**
+         * Store
+         */
+    }
     advanceExperimentOne(answer) {
         $(".choiceButton").hide();
 
@@ -210,7 +238,7 @@ class App extends Component {
     createPairs(array, callback) {
         let self = this;
         let newArray = [];
-        for (var obj in array) {
+        for (let obj in array) {
 
             for (let i = 0; i < 10; i++) {
                 obj.sound2 = self.state.sounds[i].src;
@@ -232,7 +260,7 @@ class App extends Component {
         let returnArray = [];
         array.map(function (obj) {
             let keyValues = [];
-            for (var i = 0; i < 5; i++) {
+            for (let i = 0; i < 5; i++) {
                 //Need to programmatically get the second sound
                 keyValues.push(
                     {'sound1': obj.src, 'sound2': null}
@@ -259,7 +287,7 @@ class App extends Component {
     }
 
     static shuffle(array, cb) {
-        var currentIndex = array.length, temporaryValue, randomIndex;
+        let currentIndex = array.length, temporaryValue, randomIndex;
 
         // While there remain elements to shuffle...
         while (0 !== currentIndex) {

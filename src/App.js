@@ -152,16 +152,16 @@ class App extends Component {
             }
             console.log(d);
         });
-        let data = d.map(function(obj) {
-            console.log(obj);
-            console.log(d[obj]);
-           return {answer: d[obj], vot: Number(obj)+1 }
+        let data = d.map(function(obj, index) {
+            console.log(index);
+
+           return {answer: d[obj], vot: index+1, label: (Number(index)+1) * 100 }
         });
         return (
             <LineChart width={400} height={400} data={data}>
                 <Line type="monotone" dataKey="answer" stroke="#8884d8" />
                 <CartesianGrid stroke="#ccc" />
-                <XAxis dataKey="vot" label="VOT(ms)" />
+                <XAxis dataKey="vot" label="VOT (msec *100)" />
                 <YAxis dataKey="answer"/>
             </LineChart>
         )

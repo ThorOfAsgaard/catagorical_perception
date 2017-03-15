@@ -3,7 +3,9 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import '../node_modules/jquery/dist/jquery.min'
+import '../node_modules/jquery/dist/jquery.min';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -18,7 +20,7 @@ class App extends Component {
             sounds: [],
             running: false,
             experimentOneDone: false, //reset to false
-            experimentTwoDone: false,
+            experimentTwoDone: true,
         };
         this.start = this.start.bind(this);
         this.experimentOneSetup = this.experimentOneSetup.bind(this);
@@ -27,7 +29,7 @@ class App extends Component {
         this.pressPButton = this.pressPButton.bind(this);
         this.pressSameButton = this.pressSameButton.bind(this);
         this.pressDifferentButton = this.pressDifferentButton.bind(this);
-
+        this.experimentOneChart = this.experimentOneChart.bind(this);
 
     }
 
@@ -104,9 +106,67 @@ class App extends Component {
             //Run experiment two
 
         } else {
-            //Show charts
+
         }
 
+
+    }
+    experimentOneChart() {
+        let self = this;
+        /**
+         * TODO: iterate over each instance,
+         * @type {Array}
+         */
+
+        let d = this.state.sounds.map(function(obj) {
+            console.log(obj);
+            let id = obj.id
+            let ret = {}
+           return ret[id] = 0;
+
+        });
+
+
+        this.state.experimentOneResults.map(function(obj) {
+
+            let ret = {};
+            if(obj.answer === "/p/") {
+
+                for(let i in d) {
+                    if(d[i].hasOwnProperty(obj.sound1.id)) {
+                        d[i][obj.sound1.id] +=1;
+                    }
+                }
+
+                let vot = obj.sound1;
+                vot = vot.replace("/", "");
+                vot = vot.replace("pi", "");
+                // ret.vot = Number(vot) * 100;
+                console.log(Number(vot));
+                console.log("FOO");
+
+                d[Number(vot) -1] ++;
+                return vot
+            } else {
+
+            }
+            console.log(d);
+        });
+        let data = d.map(function(obj, index) {
+            console.log(index);
+
+           return {answer: d[obj], vot: index+1, label: (Number(index)+1) * 100 }
+        });
+        return (
+            <LineChart width={400} height={400} data={data}>
+                <Line type="monotone" dataKey="answer" stroke="#8884d8" />
+                <CartesianGrid stroke="#ccc" />
+                <XAxis dataKey="vot" label="VOT (msec *100)" />
+                <YAxis dataKey="answer"/>
+            </LineChart>
+        )
+    }
+    experimentTwoChart() {
 
     }
 
@@ -218,7 +278,7 @@ class App extends Component {
         } else {
             this.setState({running: false, experimentOneDone: true}, function () {
 
-                console.log(this.state.experimentOneResults);
+                // console.log(this.state.experimentOneResults);
 
             });
 
@@ -255,7 +315,8 @@ class App extends Component {
     }
     experimentOnePlay(question) {
         $(".choiceButton").hide();
-
+        let audio1timeout = null;
+        let audio2timeout = null;
         let audio = this.state.experimentOne[question];
         let audio2 = null;
         //TODO: add ended event
@@ -273,6 +334,7 @@ class App extends Component {
 
         this.setState({experimentOneResults: results});
         audio.onended = function () {
+
             audio2.onended = function () {
                 audio.onend = null;
                 audio2.onend = null;
@@ -282,6 +344,14 @@ class App extends Component {
         };
         console.log("play");
         audio.play();
+        // audio1timeout = setTimeout(function() {
+        //
+        //     clearTimeout(audio1timeout);
+        //     audio2.play();
+        //
+        //
+        // },250);
+
 
     }
 
@@ -396,7 +466,8 @@ class App extends Component {
             } else if (self.state.experimentOneDone && !self.state.experimentTwoDone) {
                 buttons = [self.sameButton(), self.differentButton()]
             } else {
-                buttons = [<button onClick="" className="btn btn-success">See Results</button>]
+
+                buttons = [self.experimentOneChart(), self.experimentTwoChart()]
             }
         }
 
@@ -425,7 +496,8 @@ class App extends Component {
             let finished = (this.state.experimentOneDone && this.state.experimentTwoDone) ? [
                     <div className="jumbotron">
                         <h2>Experiments complete</h2>
-
+                        {this.experimentOneChart()}
+                        {this.experimentTwoChart()}
                         Charts will be here soon
 
                     </div>

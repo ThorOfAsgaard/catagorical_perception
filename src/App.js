@@ -192,7 +192,7 @@ class App extends Component {
         let self = this;
         let array = [];
         let sounds = this.state.sounds;
-        let repetitions = this.props.experimentOneRepetitions || 1
+        let repetitions = this.props.experimentOneRepetitions || 1;
         for (let i = 0; i < repetitions; i++) {
             for (let x = 0; x < sounds.length; x++) {
                 array.push(sounds[x]);
@@ -307,35 +307,42 @@ class App extends Component {
 
     }
 
-    experimentTwoPlay(question) {
-        console.log("play")
+    /**
+     * Single stimulus
+     * @param question
+     */
+    experimentOnePlay(question) {
+
         $(".choiceButton").hide();
         let obj = this.state.experimentTwo[question];
         console.log(obj);
         let audio = obj.sound1;
-
-        let audio2 = obj.sound2;
-
-        let answerObj = {"sound1": audio.id, "sound2": audio2.id}
+        let answerObj = {"sound1": audio.id}
         let results = this.state.experimentTwoResults;
         results[question] = answerObj;
 
         this.setState({experimentTwoResults: results});
 
         audio.onended = function () {
-            audio2.onended = function () {
-                audio.onend = null;
-                audio2.onend = null;
+
                 $(".choiceButton").show();
-            };
-            audio2.play();
+
+
         };
 
         audio.play();
+        setTimeout(function() {
+            $(".choiceButton").show();
+        },500);
 
     }
 
-    experimentOnePlay(question) {
+    /**
+     * Two Stimulus, separated by 250msec
+     * @param question
+     */
+    experimentTwoPlay(question) {
+
         $(".choiceButton").hide();
         let audio = this.state.experimentOne[question];
         let audio2 = null;
@@ -362,6 +369,8 @@ class App extends Component {
         //         audio2.play();
         //     }, 1000)
         // };
+
+
         audio.onended = function () {
             clearTimeout(endedTimeout);
             audio2.onended = function () {
@@ -371,7 +380,9 @@ class App extends Component {
                 $(".choiceButton").show();
                 console.log("audio2 end");
             };
+            setTimeout(function() {
             audio2.play();
+            }, 250);
         };
         console.log("play");
         audio.play();
@@ -505,11 +516,11 @@ class App extends Component {
 
         let experimentOneShow = !this.state.experimentOneDone ? [<div className="well experimentOne">
                 <h1>Experiment One - Identification</h1>
-                <p>In this first experiment, you will hear a and array of stimuli in two sequence pairs. Once
-                    you've
-                    heard both sounds in a pair, click the button the button that corresponds to the first sound you heard..
-                    The
-                    experiment will automatically advanced to the next set of stimuli. </p>
+                <p>
+                    In this first experiment, you will hear a number of speech sounds. On each trial, please indicate whether you think the sound you heard sounds more like 'p' or more like 'b'. When in doubt, please guess. After each decision, the experiment will automatically advance to the next trial.
+
+
+                </p>
                 Click 'Start' to begin the first experiment.
                 <br />
                 <button className="btn btn-primary startButton" onClick={this.start}>Start The Identification
@@ -519,9 +530,10 @@ class App extends Component {
         let experimentTwoShow = (this.state.experimentOneDone && !this.state.experimentTwoDone) ? [<div
                 className="well experimentTwo">
                 <h1>Experiment Two - Discrimination</h1>
-                <p>In this section you will hear two stimuli back to back and you are you to determine whether
-                    or
-                    not they sound the 'same' or 'different.'</p>
+                <p>
+                    In this second experiment, you will hear two sounds on each trial. Your task is to indicate if the two sounds are the same or different. After each decision, the experiment will automatically advance to the next trial.Click 'Start' to begin the second experiment.
+
+                </p>
                 <br />
                 <button className="btn btn-primary startButton" onClick={this.start}>Start the Discrimination Experiment
                 </button>

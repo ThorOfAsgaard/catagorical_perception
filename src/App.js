@@ -19,7 +19,7 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: false, //reset to false
+            experimentOneDone: true, //reset to false
             experimentTwoDone: false,
         };
         this.start = this.start.bind(this);
@@ -163,7 +163,7 @@ class App extends Component {
             console.log(d);
         });
         let data = d.map(function (obj, index) {
-            console.log(index);
+
 
             return {answer: d[obj], vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10}
         });
@@ -184,6 +184,65 @@ class App extends Component {
     }
 
     experimentTwoChart() {
+        let self = this;
+        let pairs = [];
+        let res = this.state.experimentTwoResults.map(function(obj) {
+            let found = false;
+            pairs.map(function(o) {
+
+                if(o.hasOwnProperty("pair") && o.pair === obj.pair) {
+                    console.log("found existing pair");
+                    //noinspection JSAnnotator
+
+                    let val = Number(o.value) +1 || 1;
+                    o.value = val;
+                    found=true;
+                }
+            })
+            if(!obj.answer) {
+                console.log('incrementing');
+                obj.value = obj.value ++ || 1;
+            }
+
+            if(found) {
+
+                console.log("Found object");
+                return(obj);
+            } else {
+                console.log("didn't find object, pushing to pairs");
+
+                pairs.push(obj);
+
+            }
+
+        })
+
+        console.log(pairs);
+        let final = pairs.map(function(obj) {
+            
+            obj.value = (Number(obj.value)/self.props.experimentTwoRepetitions) * 100;
+            console.log(obj);
+
+            return obj;
+        });
+
+        console.log(final);
+        return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+
+            <LineChart width={400} height={400} data={final}>
+                <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
+                <CartesianGrid stroke="#ccc"/>
+                <XAxis dataKey="pair" label="Pair" name="Pair" type="number"/>
+                <YAxis dataKey="value" label="% of correct" type="number" />
+            </LineChart>
+            {/*<p className="vertical-text">*/}
+                {/*Percentage of correct discrimination*/}
+            {/*</p>*/}
+
+
+
+
+        </div>)
 
     }
 
@@ -220,10 +279,19 @@ class App extends Component {
 
          */
         let pairs = self.createPairs(this.state.sounds);
-        this.setState({experimentTwo: pairs, question: 0}, function () {
+        console.log("Pairs");
+        console.log(pairs);
+        let array = [];
+        let repetitions = this.props.experimentTwoRepetitions || 1;
+        for(let i =0; i < repetitions; i++) {
+            for (let x = 0; x < pairs.length; x++) {
+                array.push(pairs[x]);
+            }
+        }
+        this.setState({experimentTwo: array, question: 0}, function () {
             self.runExperimentTwo()
         });
-        console.log(pairs);
+
     }
 
     pressBButton() {
@@ -314,14 +382,17 @@ class App extends Component {
     experimentOnePlay(question) {
 
         $(".choiceButton").hide();
-        let obj = this.state.experimentTwo[question];
+        let obj = this.state.experimentOne[question];
         console.log(obj);
-        let audio = obj.sound1;
-        let answerObj = {"sound1": audio.id}
-        let results = this.state.experimentTwoResults;
+        let audio = obj;
+
+        // console.log(audio);
+        let answerObj = {"sound1": obj.id}
+        let results = this.state.experimentOneResults;
+
         results[question] = answerObj;
 
-        this.setState({experimentTwoResults: results});
+        this.setState({experimentOneResults: results});
 
         audio.onended = function () {
 
@@ -344,22 +415,17 @@ class App extends Component {
     experimentTwoPlay(question) {
 
         $(".choiceButton").hide();
-        let audio = this.state.experimentOne[question];
-        let audio2 = null;
-        //TODO: add ended event
-        if (question + 2 < this.state.experimentOne.length) {
-            audio2 = this.state.experimentOne[question + 2]
-        } else {
-            let question2 = this.state.experimentOne.length - question;
-            audio2 = this.state.experimentOne[question2];
-        }
+        let audio = this.state.experimentTwo[question].sound1;
+        console.log(audio);
+        let audio2 =this.state.experimentTwo[question].sound2;
 
-        let answerObj = {"sound1": audio.id, "sound2": audio2.id}
 
-        let results = this.state.experimentOneResults;
+        let answerObj = {"sound1": audio.id, "sound2": audio2.id, "pair": this.state.experimentTwo[question].pair}
+
+        let results = this.state.experimentTwo;
         results[question] = answerObj;
 
-        this.setState({experimentOneResults: results});
+        this.setState({experimentTwoResults: results});
         let endedTimeout = null;
         // audio.onplay = function() {
         //     endedTimeout = setTimeout(function() {
@@ -397,21 +463,10 @@ class App extends Component {
 
     }
 
-    experimentTwo() {
-        /**
-         * Create Random pairs of Stimuli - each stimuli should be repeated 5 times for a total of 50
-         * Data Structure:
-         * Array of JSON Objects
-         * [
-         * {firstSound: foo, secondSound: bar}
-         * ]
-         * First task - create a list of all permutations
-         */
 
-    }
 
     /**
-     * Creates pairs of +1 VOT, so 1:3, 2:4, etc.
+     * Creates pairs of +1 VOT, so 1:3, 2:4, etc. up until 8,
      * @param array
      * @param callback
      * @returns {Array}
@@ -423,17 +478,18 @@ class App extends Component {
             var newObj = {
                 sound1: array[obj]
             };
-            console.log(Number(obj) + 2);
+            if(Number(obj) + 2 > array.length-1) {
+                continue;
+            }
 
             //Always tries to find +1 VOT
             if (Number(obj) + 2 > array.length - 1) {
-                newObj.sound2 = self.state.sounds[(Number(obj) + 2) - (array.length - 1)]
+                newObj.sound2 = self.state.sounds[Number(obj) + 1]
             } else {
                 newObj.sound2 = self.state.sounds[Number(obj) + 2]
             }
 
-            console.log(newObj);
-
+            newObj.pair = Number(obj) +1;
             newArray.push(newObj);
 
             // console.log(obj);

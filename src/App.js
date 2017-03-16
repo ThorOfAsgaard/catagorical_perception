@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import '../node_modules/jquery/dist/jquery.min';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid } from 'recharts';
+import {LineChart, Line, XAxis, YAxis, CartesianGrid} from 'recharts';
 
 class App extends Component {
     constructor(props) {
@@ -30,6 +30,7 @@ class App extends Component {
         this.pressSameButton = this.pressSameButton.bind(this);
         this.pressDifferentButton = this.pressDifferentButton.bind(this);
         this.experimentOneChart = this.experimentOneChart.bind(this);
+        this.experimentTwoChart = this.experimentTwoChart.bind(this);
 
     }
 
@@ -47,7 +48,7 @@ class App extends Component {
             sounds.push(a);
         }
 
-        this.setState({sounds: sounds}, function() {
+        this.setState({sounds: sounds}, function () {
             console.log(this.state.sounds);
         });
 
@@ -111,6 +112,16 @@ class App extends Component {
 
 
     }
+
+    footer() {
+
+        return ( <nav className="navbar navbar-inverse navbar-fixed-bottom">
+            <div className="container-fluid ">
+                <p className="navbar-text">Question: {this.state.question}</p>
+            </div>
+        </nav>)
+    }
+
     experimentOneChart() {
         let self = this;
         /**
@@ -118,23 +129,22 @@ class App extends Component {
          * @type {Array}
          */
 
-        let d = this.state.sounds.map(function(obj) {
-            console.log(obj);
-            let id = obj.id
+        let d = this.state.sounds.map(function (obj) {
+            let id = obj.id;
             let ret = {}
-           return ret[id] = 0;
+            return ret[id] = 0;
 
         });
 
 
-        this.state.experimentOneResults.map(function(obj) {
+        this.state.experimentOneResults.map(function (obj) {
 
             let ret = {};
-            if(obj.answer === "/p/") {
+            if (obj.answer === "/p/") {
 
-                for(let i in d) {
-                    if(d[i].hasOwnProperty(obj.sound1.id)) {
-                        d[i][obj.sound1.id] +=1;
+                for (let i in d) {
+                    if (d[i].hasOwnProperty(obj.sound1.id)) {
+                        d[i][obj.sound1.id] += 1;
                     }
                 }
 
@@ -142,30 +152,37 @@ class App extends Component {
                 vot = vot.replace("/", "");
                 vot = vot.replace("pi", "");
                 // ret.vot = Number(vot) * 100;
-                console.log(Number(vot));
-                console.log("FOO");
 
-                d[Number(vot) -1] ++;
+
+                d[Number(vot) - 1]++;
                 return vot
             } else {
 
             }
+            console.log("Numbers");
             console.log(d);
         });
-        let data = d.map(function(obj, index) {
+        let data = d.map(function (obj, index) {
             console.log(index);
 
-           return {answer: d[obj], vot: index+1, label: (Number(index)+1) * 100 }
+            return {answer: d[obj], vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10}
         });
-        return (
-            <LineChart width={400} height={400} data={data}>
-                <Line type="monotone" dataKey="answer" stroke="#8884d8" />
-                <CartesianGrid stroke="#ccc" />
-                <XAxis dataKey="vot" label="VOT (msec *100)" />
-                <YAxis dataKey="answer"/>
-            </LineChart>
+        return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+
+                <LineChart width={400} height={400} data={data}>
+                    <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
+                    <CartesianGrid stroke="#ccc"/>
+                    <XAxis dataKey="vot" label="VOT" name="VOT"/>
+                    <YAxis dataKey="answer" label="Number of /pi/ responses"/>
+                </LineChart>
+                <span className="pull-left vertical-text">Number of /pi/ Responses</span>
+                <br />
+                <span className="center">VOT (msec)</span>
+
+            </div>
         )
     }
+
     experimentTwoChart() {
 
     }
@@ -203,7 +220,7 @@ class App extends Component {
 
          */
         let pairs = self.createPairs(this.state.sounds);
-        this.setState({experimentTwo: pairs, question: 0}, function() {
+        this.setState({experimentTwo: pairs, question: 0}, function () {
             self.runExperimentTwo()
         });
         console.log(pairs);
@@ -237,7 +254,7 @@ class App extends Component {
         obj.answer = answer;
         console.log(obj);
         current[this.state.question] = obj;
-        this.setState({experimentTwoResults: current, question: this.state.question +1}, function() {
+        this.setState({experimentTwoResults: current, question: this.state.question + 1}, function () {
             this.runExperimentTwo();
         })
     }
@@ -254,19 +271,21 @@ class App extends Component {
         });
 
     }
+
     runExperimentTwo() {
         $('.experimentOne').hide();
         $('.startButton').hide();
         let question = this.state.question || 0;
-        if(question < this.state.experimentTwo.length) {
+        if (question < this.state.experimentTwo.length) {
             this.experimentTwoPlay(question);
 
         } else {
-            this.setState({running: false, experimentTwoDone: true}, function() {
+            this.setState({running: false, experimentTwoDone: true}, function () {
                 console.log(this.state.experimentTwoResults);
             })
         }
     }
+
     runExperimentOne() {
         $('.experimentTwo').hide();
         $('.startButton').hide();
@@ -287,6 +306,7 @@ class App extends Component {
         }
 
     }
+
     experimentTwoPlay(question) {
         console.log("play")
         $(".choiceButton").hide();
@@ -301,6 +321,7 @@ class App extends Component {
         results[question] = answerObj;
 
         this.setState({experimentTwoResults: results});
+
         audio.onended = function () {
             audio2.onended = function () {
                 audio.onend = null;
@@ -313,10 +334,9 @@ class App extends Component {
         audio.play();
 
     }
+
     experimentOnePlay(question) {
         $(".choiceButton").hide();
-        let audio1timeout = null;
-        let audio2timeout = null;
         let audio = this.state.experimentOne[question];
         let audio2 = null;
         //TODO: add ended event
@@ -333,12 +353,23 @@ class App extends Component {
         results[question] = answerObj;
 
         this.setState({experimentOneResults: results});
+        let endedTimeout = null;
+        // audio.onplay = function() {
+        //     endedTimeout = setTimeout(function() {
+        //         console.log("Timedout");
+        //
+        //         // audio.onended = null;
+        //         audio2.play();
+        //     }, 1000)
+        // };
         audio.onended = function () {
-
+            clearTimeout(endedTimeout);
             audio2.onended = function () {
-                audio.onend = null;
-                audio2.onend = null;
+                clearTimeout(endedTimeout);
+                audio.onended = null;
+                audio2.onended = null;
                 $(".choiceButton").show();
+                console.log("audio2 end");
             };
             audio2.play();
         };
@@ -381,20 +412,20 @@ class App extends Component {
             var newObj = {
                 sound1: array[obj]
             };
-            console.log(Number(obj)+2);
+            console.log(Number(obj) + 2);
 
-                //Always tries to find +1 VOT
-                if(Number(obj) +2 > array.length -1) {
-                    newObj.sound2 = self.state.sounds[(Number(obj)+2) -(array.length-1)]
-                } else {
-                    newObj.sound2 = self.state.sounds[Number(obj)+2]
-                }
+            //Always tries to find +1 VOT
+            if (Number(obj) + 2 > array.length - 1) {
+                newObj.sound2 = self.state.sounds[(Number(obj) + 2) - (array.length - 1)]
+            } else {
+                newObj.sound2 = self.state.sounds[Number(obj) + 2]
+            }
 
-                console.log(newObj);
+            console.log(newObj);
 
-                newArray.push(newObj);
+            newArray.push(newObj);
 
-                // console.log(obj);
+            // console.log(obj);
 
         }
         return newArray;
@@ -435,6 +466,7 @@ class App extends Component {
             return returnArray;
         }
     }
+
     static shuffle(array, cb) {
         let currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -460,8 +492,8 @@ class App extends Component {
     render() {
         let self = this;
         let buttons = null;
-        if(self.state.running) {
-            if(!self.state.experimentOneDone) {
+        if (self.state.running) {
+            if (!self.state.experimentOneDone) {
                 buttons = [self.pButton(), self.bButton()]
             } else if (self.state.experimentOneDone && !self.state.experimentTwoDone) {
                 buttons = [self.sameButton(), self.differentButton()]
@@ -475,7 +507,7 @@ class App extends Component {
                 <h1>Experiment One - Identification</h1>
                 <p>In this first experiment, you will hear a and array of stimuli in two sequence pairs. Once
                     you've
-                    heard both sounds in a pair, simply choose the one that sounds closest to the phoneme /p/.
+                    heard both sounds in a pair, click the button the button that corresponds to the first sound you heard..
                     The
                     experiment will automatically advanced to the next set of stimuli. </p>
                 Click 'Start' to begin the first experiment.
@@ -484,7 +516,8 @@ class App extends Component {
                     Experiment
                 </button>
             </div>] : null;
-        let experimentTwoShow = (this.state.experimentOneDone && !this.state.experimentTwoDone)? [<div className="well experimentTwo">
+        let experimentTwoShow = (this.state.experimentOneDone && !this.state.experimentTwoDone) ? [<div
+                className="well experimentTwo">
                 <h1>Experiment Two - Discrimination</h1>
                 <p>In this section you will hear two stimuli back to back and you are you to determine whether
                     or
@@ -493,33 +526,37 @@ class App extends Component {
                 <button className="btn btn-primary startButton" onClick={this.start}>Start the Discrimination Experiment
                 </button>
             </div>] : null;
-            let finished = (this.state.experimentOneDone && this.state.experimentTwoDone) ? [
-                    <div className="jumbotron">
-                        <h2>Experiments complete</h2>
-                        {this.experimentOneChart()}
-                        {this.experimentTwoChart()}
-                        Charts will be here soon
+        let finished = (this.state.experimentOneDone && this.state.experimentTwoDone) ? [
+                <div className="jumbotron">
+                    <h2>Experiments complete</h2>
+                    {this.experimentOneChart()}
+                    {this.experimentTwoChart()}
+                    Charts will be here soon
 
+                </div>
+
+
+            ] : null;
+        return (
+            <div className="">
+                <div className="App container">
+                    <div className="App-header">
+                        <img src={logo} className="App-logo" alt="logo"/>
+                        <h2>Jongman Categorical Perception Experiment</h2>
+                    </div>
+                    <div className="App-intro container">
+                        {experimentOneShow}
+
+                        {experimentTwoShow}
+
+                        {finished}
                     </div>
 
+                    <br />
+                    {buttons}
 
-                ] : null;
-        return (
-            <div className="App container">
-                <div className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h2>Jongman Categorical Perception Experiment</h2>
                 </div>
-                <div className="App-intro container">
-                    {experimentOneShow}
-
-                    {experimentTwoShow}
-
-                    {finished}
-                </div>
-
-                <br />
-                {buttons}
+                {this.footer()}
             </div>
         );
     }

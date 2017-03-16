@@ -20,7 +20,7 @@ class App extends Component {
             sounds: [],
             running: false,
             experimentOneDone: false, //reset to false
-            experimentTwoDone: true,
+            experimentTwoDone: false,
         };
         this.start = this.start.bind(this);
         this.experimentOneSetup = this.experimentOneSetup.bind(this);

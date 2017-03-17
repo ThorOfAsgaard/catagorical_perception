@@ -29728,6 +29728,11 @@ var App = function (_Component) {
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
                     _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number' }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'value', label: '% of correct', type: 'number' })
+                ),
+                _react2.default.createElement(
+                    'span',
+                    { className: 'center' },
+                    'Pair'
                 )
             );
         }
@@ -30078,11 +30083,10 @@ var App = function (_Component) {
                 _react2.default.createElement(
                     'h2',
                     null,
-                    'Experiments complete'
+                    'Experiment Results'
                 ),
                 this.experimentOneChart(),
-                this.experimentTwoChart(),
-                'Charts will be here soon'
+                this.experimentTwoChart()
             )] : null;
             return _react2.default.createElement(
                 'div',

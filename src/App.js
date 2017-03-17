@@ -238,6 +238,7 @@ class App extends Component {
             {/*<p className="vertical-text">*/}
                 {/*Percentage of correct discrimination*/}
             {/*</p>*/}
+            <span className="center">Pair</span>
 
 
 
@@ -596,10 +597,10 @@ class App extends Component {
             </div>] : null;
         let finished = (this.state.experimentOneDone && this.state.experimentTwoDone) ? [
                 <div className="jumbotron">
-                    <h2>Experiments complete</h2>
+                    <h2>Experiment Results</h2>
                     {this.experimentOneChart()}
                     {this.experimentTwoChart()}
-                    Charts will be here soon
+
 
                 </div>
 

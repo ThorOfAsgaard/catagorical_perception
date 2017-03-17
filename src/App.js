@@ -1,8 +1,8 @@
 /*global jQuery $*/
 
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+
 import '../node_modules/jquery/dist/jquery.min';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid} from 'recharts';
 
@@ -609,7 +609,7 @@ class App extends Component {
             <div className="">
                 <div className="App container">
                     <div className="App-header">
-                        <img src={logo} className="App-logo" alt="logo"/>
+                        <img src="./logo.svg" className="App-logo" alt="logo"/>
                         <h2>Jongman Categorical Perception Experiment</h2>
                     </div>
                     <div className="App-intro container">

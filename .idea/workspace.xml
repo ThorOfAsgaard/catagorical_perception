@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78b78f26-1009-4e1d-8ad9-579d6ae58f02" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webpack.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="227" column="8" lean-forward="false" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="8" />
+            <state relative-caret-position="22">
+              <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
               <folding>
                 <element signature="e#331#736#0" expanded="false" />
                 <element signature="n#!!block;n#getAssets#0;n#App#0" expanded="false" />
@@ -81,31 +81,31 @@
                 <element signature="e#3983#4056#0" expanded="false" />
                 <element signature="e#4337#4353#0" expanded="false" />
                 <element signature="e#4680#5031#0" expanded="false" />
-                <element signature="e#7547#7603#0" expanded="false" />
-                <element signature="e#7758#7945#0" expanded="false" />
+                <element signature="e#7539#7595#0" expanded="false" />
+                <element signature="e#7750#7937#0" expanded="false" />
                 <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-                <element signature="e#8777#8809#0" expanded="false" />
-                <element signature="e#9178#9226#0" expanded="false" />
+                <element signature="e#8769#8801#0" expanded="false" />
+                <element signature="e#9170#9218#0" expanded="false" />
                 <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-                <element signature="e#9584#9632#0" expanded="false" />
+                <element signature="e#9576#9624#0" expanded="false" />
                 <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-                <element signature="e#10287#10345#0" expanded="false" />
-                <element signature="e#10351#10548#0" expanded="false" />
-                <element signature="e#10434#10516#0" expanded="false" />
+                <element signature="e#10279#10337#0" expanded="false" />
+                <element signature="e#10343#10540#0" expanded="false" />
+                <element signature="e#10426#10508#0" expanded="false" />
                 <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-                <element signature="e#11058#11115#0" expanded="false" />
-                <element signature="e#11170#11220#0" expanded="false" />
+                <element signature="e#11050#11107#0" expanded="false" />
+                <element signature="e#11162#11212#0" expanded="false" />
                 <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-                <element signature="e#11843#11873#0" expanded="false" />
-                <element signature="e#12137#12537#0" expanded="false" />
-                <element signature="e#12220#12442#0" expanded="false" />
-                <element signature="e#12478#12520#0" expanded="false" />
-                <element signature="e#12598#12640#0" expanded="false" />
+                <element signature="e#11835#11865#0" expanded="false" />
+                <element signature="e#12129#12529#0" expanded="false" />
+                <element signature="e#12212#12434#0" expanded="false" />
+                <element signature="e#12470#12512#0" expanded="false" />
+                <element signature="e#12590#12632#0" expanded="false" />
                 <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
@@ -116,21 +116,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="176">
+              <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.css">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -159,7 +159,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
+            <state relative-caret-position="66">
               <caret line="6" column="110" lean-forward="false" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="110" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -189,6 +189,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -239,6 +246,8 @@
         <option value="$PROJECT_DIR$/docs/index.html" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -276,6 +285,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -394,7 +404,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -484,25 +493,26 @@
       <workItem from="1489340782974" duration="18085000" />
       <workItem from="1489502334768" duration="8066000" />
       <workItem from="1489671691268" duration="11824000" />
-      <workItem from="1489688934771" duration="4080000" />
+      <workItem from="1489688934771" duration="5561000" />
+      <workItem from="1489758883520" duration="233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42055000" />
+    <option name="totallyTimeSpent" value="43769000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2409" y="-9" width="2418" height="1318" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14730999" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14901793" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983378" sideWeight="0.50475687" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3269731" sideWeight="0.49524313" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3269731" sideWeight="0.49524313" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -548,6 +558,56 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="6" column="110" lean-forward="false" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="110" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/static/js/main.b4cd89b4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="300" lean-forward="false" selection-start-line="0" selection-start-column="300" selection-end-line="0" selection-end-column="300" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md.bak">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -605,31 +665,31 @@
             <element signature="e#3983#4056#0" expanded="false" />
             <element signature="e#4337#4353#0" expanded="false" />
             <element signature="e#4680#5031#0" expanded="false" />
-            <element signature="e#7547#7603#0" expanded="false" />
-            <element signature="e#7758#7945#0" expanded="false" />
+            <element signature="e#7539#7595#0" expanded="false" />
+            <element signature="e#7750#7937#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8777#8809#0" expanded="false" />
-            <element signature="e#9178#9226#0" expanded="false" />
+            <element signature="e#8769#8801#0" expanded="false" />
+            <element signature="e#9170#9218#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9584#9632#0" expanded="false" />
+            <element signature="e#9576#9624#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10287#10345#0" expanded="false" />
-            <element signature="e#10351#10548#0" expanded="false" />
-            <element signature="e#10434#10516#0" expanded="false" />
+            <element signature="e#10279#10337#0" expanded="false" />
+            <element signature="e#10343#10540#0" expanded="false" />
+            <element signature="e#10426#10508#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11058#11115#0" expanded="false" />
-            <element signature="e#11170#11220#0" expanded="false" />
+            <element signature="e#11050#11107#0" expanded="false" />
+            <element signature="e#11162#11212#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#11843#11873#0" expanded="false" />
-            <element signature="e#12137#12537#0" expanded="false" />
-            <element signature="e#12220#12442#0" expanded="false" />
-            <element signature="e#12478#12520#0" expanded="false" />
-            <element signature="e#12598#12640#0" expanded="false" />
+            <element signature="e#11835#11865#0" expanded="false" />
+            <element signature="e#12129#12529#0" expanded="false" />
+            <element signature="e#12212#12434#0" expanded="false" />
+            <element signature="e#12470#12512#0" expanded="false" />
+            <element signature="e#12590#12632#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
@@ -726,31 +786,31 @@
             <element signature="e#3983#4056#0" expanded="false" />
             <element signature="e#4337#4353#0" expanded="false" />
             <element signature="e#4680#5031#0" expanded="false" />
-            <element signature="e#7547#7603#0" expanded="false" />
-            <element signature="e#7758#7945#0" expanded="false" />
+            <element signature="e#7539#7595#0" expanded="false" />
+            <element signature="e#7750#7937#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8777#8809#0" expanded="false" />
-            <element signature="e#9178#9226#0" expanded="false" />
+            <element signature="e#8769#8801#0" expanded="false" />
+            <element signature="e#9170#9218#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9584#9632#0" expanded="false" />
+            <element signature="e#9576#9624#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10287#10345#0" expanded="false" />
-            <element signature="e#10351#10548#0" expanded="false" />
-            <element signature="e#10434#10516#0" expanded="false" />
+            <element signature="e#10279#10337#0" expanded="false" />
+            <element signature="e#10343#10540#0" expanded="false" />
+            <element signature="e#10426#10508#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11058#11115#0" expanded="false" />
-            <element signature="e#11170#11220#0" expanded="false" />
+            <element signature="e#11050#11107#0" expanded="false" />
+            <element signature="e#11162#11212#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#11843#11873#0" expanded="false" />
-            <element signature="e#12137#12537#0" expanded="false" />
-            <element signature="e#12220#12442#0" expanded="false" />
-            <element signature="e#12478#12520#0" expanded="false" />
-            <element signature="e#12598#12640#0" expanded="false" />
+            <element signature="e#11835#11865#0" expanded="false" />
+            <element signature="e#12129#12529#0" expanded="false" />
+            <element signature="e#12212#12434#0" expanded="false" />
+            <element signature="e#12470#12512#0" expanded="false" />
+            <element signature="e#12590#12632#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
@@ -879,31 +939,31 @@
             <element signature="e#3983#4056#0" expanded="false" />
             <element signature="e#4337#4353#0" expanded="false" />
             <element signature="e#4680#5031#0" expanded="false" />
-            <element signature="e#7547#7603#0" expanded="false" />
-            <element signature="e#7758#7945#0" expanded="false" />
+            <element signature="e#7539#7595#0" expanded="false" />
+            <element signature="e#7750#7937#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8777#8809#0" expanded="false" />
-            <element signature="e#9178#9226#0" expanded="false" />
+            <element signature="e#8769#8801#0" expanded="false" />
+            <element signature="e#9170#9218#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9584#9632#0" expanded="false" />
+            <element signature="e#9576#9624#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10287#10345#0" expanded="false" />
-            <element signature="e#10351#10548#0" expanded="false" />
-            <element signature="e#10434#10516#0" expanded="false" />
+            <element signature="e#10279#10337#0" expanded="false" />
+            <element signature="e#10343#10540#0" expanded="false" />
+            <element signature="e#10426#10508#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11058#11115#0" expanded="false" />
-            <element signature="e#11170#11220#0" expanded="false" />
+            <element signature="e#11050#11107#0" expanded="false" />
+            <element signature="e#11162#11212#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#11843#11873#0" expanded="false" />
-            <element signature="e#12137#12537#0" expanded="false" />
-            <element signature="e#12220#12442#0" expanded="false" />
-            <element signature="e#12478#12520#0" expanded="false" />
-            <element signature="e#12598#12640#0" expanded="false" />
+            <element signature="e#11835#11865#0" expanded="false" />
+            <element signature="e#12129#12529#0" expanded="false" />
+            <element signature="e#12212#12434#0" expanded="false" />
+            <element signature="e#12470#12512#0" expanded="false" />
+            <element signature="e#12590#12632#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
@@ -986,6 +1046,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
       <provider editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -993,20 +1059,6 @@
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,7 +1084,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="66">
           <caret line="6" column="110" lean-forward="false" selection-start-line="6" selection-start-column="86" selection-end-line="6" selection-end-column="110" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -1042,8 +1094,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="227" column="8" lean-forward="false" selection-start-line="227" selection-start-column="8" selection-end-line="227" selection-end-column="8" />
+        <state relative-caret-position="22">
+          <caret line="227" column="0" lean-forward="false" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
           <folding>
             <element signature="e#331#736#0" expanded="false" />
             <element signature="n#!!block;n#getAssets#0;n#App#0" expanded="false" />
@@ -1069,37 +1121,53 @@
             <element signature="e#3983#4056#0" expanded="false" />
             <element signature="e#4337#4353#0" expanded="false" />
             <element signature="e#4680#5031#0" expanded="false" />
-            <element signature="e#7547#7603#0" expanded="false" />
-            <element signature="e#7758#7945#0" expanded="false" />
+            <element signature="e#7539#7595#0" expanded="false" />
+            <element signature="e#7750#7937#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8777#8809#0" expanded="false" />
-            <element signature="e#9178#9226#0" expanded="false" />
+            <element signature="e#8769#8801#0" expanded="false" />
+            <element signature="e#9170#9218#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9584#9632#0" expanded="false" />
+            <element signature="e#9576#9624#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10287#10345#0" expanded="false" />
-            <element signature="e#10351#10548#0" expanded="false" />
-            <element signature="e#10434#10516#0" expanded="false" />
+            <element signature="e#10279#10337#0" expanded="false" />
+            <element signature="e#10343#10540#0" expanded="false" />
+            <element signature="e#10426#10508#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11058#11115#0" expanded="false" />
-            <element signature="e#11170#11220#0" expanded="false" />
+            <element signature="e#11050#11107#0" expanded="false" />
+            <element signature="e#11162#11212#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#11843#11873#0" expanded="false" />
-            <element signature="e#12137#12537#0" expanded="false" />
-            <element signature="e#12220#12442#0" expanded="false" />
-            <element signature="e#12478#12520#0" expanded="false" />
-            <element signature="e#12598#12640#0" expanded="false" />
+            <element signature="e#11835#11865#0" expanded="false" />
+            <element signature="e#12129#12529#0" expanded="false" />
+            <element signature="e#12212#12434#0" expanded="false" />
+            <element signature="e#12470#12512#0" expanded="false" />
+            <element signature="e#12590#12632#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#shuffle#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

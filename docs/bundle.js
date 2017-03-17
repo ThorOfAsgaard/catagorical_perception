@@ -29485,7 +29485,7 @@ var App = function (_Component) {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: true, //reset to false
+            experimentOneDone: false, //reset to false
             experimentTwoDone: false
         };
         _this.start = _this.start.bind(_this);

@@ -19,7 +19,7 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: true, //reset to false
+            experimentOneDone: false, //reset to false
             experimentTwoDone: false,
         };
         this.start = this.start.bind(this);

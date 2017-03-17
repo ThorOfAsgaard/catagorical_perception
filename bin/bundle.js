@@ -29478,6 +29478,7 @@ var App = function (_Component) {
         _this.state = {
             soundPrefix: props.soundPrefix,
             numSounds: props.numSounds,
+            canRun: false,
             question: null,
             experimentOne: [],
             experimentOneResults: [],
@@ -29485,7 +29486,7 @@ var App = function (_Component) {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: false, //reset to false
+            experimentOneDone: true, //reset to false
             experimentTwoDone: false
         };
         _this.start = _this.start.bind(_this);
@@ -29506,10 +29507,16 @@ var App = function (_Component) {
         value: function getAssets() {
             var sounds = [];
 
+            var self = this;
             var num = Number(this.state.numSounds) + 1;
             for (var i = 1; i < num; i++) {
+                self.setState({ canRun: false });
                 var a = document.createElement('audio');
                 a.src = './wavs/' + this.state.soundPrefix + i + '.wav';
+                a.addEventListener('canplaythrough', function () {
+                    self.setState({ canRun: true });
+                    console.log('loaded');
+                });
                 a.id = this.state.soundPrefix + i;
                 a.load();
 
@@ -29708,11 +29715,8 @@ var App = function (_Component) {
                 }
             });
 
-            console.log(pairs);
             var final = pairs.map(function (obj) {
-
                 obj.value = Number(obj.value) / self.props.experimentTwoRepetitions * 100;
-                console.log(obj);
 
                 return obj;
             });
@@ -29727,7 +29731,7 @@ var App = function (_Component) {
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'answer', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
                     _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number' }),
-                    _react2.default.createElement(_recharts.YAxis, { dataKey: 'value', label: '% of correct', type: 'number' })
+                    _react2.default.createElement(_recharts.YAxis, { dataKey: 'value', type: 'number' })
                 ),
                 _react2.default.createElement(
                     'span',
@@ -29754,14 +29758,12 @@ var App = function (_Component) {
                     self.runExperimentOne();
                 });
             });
-
-            console.log('run');
         }
     }, {
         key: 'experimentTwoSetup',
         value: function experimentTwoSetup() {
             var self = this;
-            console.log('experimentTwoSetup');
+
             /*
              Two stimuli, click 'same' or 'different', always separated by one vot
              EG: 1:3, 2:4, etc.
@@ -30050,11 +30052,11 @@ var App = function (_Component) {
                 ),
                 'Click \'Start\' to begin the first experiment.',
                 _react2.default.createElement('br', null),
-                _react2.default.createElement(
+                this.state.canRun ? _react2.default.createElement(
                     'button',
                     { className: 'btn btn-primary startButton', onClick: this.start },
                     'Start The Identification Experiment'
-                )
+                ) : null
             )] : null;
             var experimentTwoShow = this.state.experimentOneDone && !this.state.experimentTwoDone ? [_react2.default.createElement(
                 'div',
@@ -30071,11 +30073,11 @@ var App = function (_Component) {
                     'In this second experiment, you will hear two sounds on each trial. Your task is to indicate if the two sounds are the same or different. After each decision, the experiment will automatically advance to the next trial.Click \'Start\' to begin the second experiment.'
                 ),
                 _react2.default.createElement('br', null),
-                _react2.default.createElement(
+                this.state.canRun ? _react2.default.createElement(
                     'button',
                     { className: 'btn btn-primary startButton', onClick: this.start },
                     'Start the Discrimination Experiment'
-                )
+                ) : null
             )] : null;
             var finished = this.state.experimentOneDone && this.state.experimentTwoDone ? [_react2.default.createElement(
                 'div',
@@ -57479,7 +57481,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '5', logo: './logo.svg' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '2', logo: './logo.svg' }), document.getElementById('root'));
 
 /***/ })
 /******/ ]);

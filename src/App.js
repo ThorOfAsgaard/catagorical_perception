@@ -12,6 +12,7 @@ class App extends Component {
         this.state = {
             soundPrefix: props.soundPrefix,
             numSounds: props.numSounds,
+            canRun: false,
             question: null,
             experimentOne: [],
             experimentOneResults: [],
@@ -19,7 +20,7 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: false, //reset to false
+            experimentOneDone: true, //reset to false
             experimentTwoDone: false,
         };
         this.start = this.start.bind(this);
@@ -37,10 +38,16 @@ class App extends Component {
     getAssets() {
         let sounds = [];
 
+        var self = this;
         let num = Number(this.state.numSounds) + 1;
         for (let i = 1; i < num; i++) {
+            self.setState({canRun: false});
             let a = document.createElement('audio');
             a.src = './wavs/' + this.state.soundPrefix + i + '.wav';
+            a.addEventListener('canplaythrough', function() {
+                self.setState({canRun: true});
+               console.log('loaded');
+            });
             a.id = this.state.soundPrefix + i;
             a.load();
 
@@ -217,11 +224,9 @@ class App extends Component {
 
         })
 
-        console.log(pairs);
+
         let final = pairs.map(function(obj) {
-            
             obj.value = (Number(obj.value)/self.props.experimentTwoRepetitions) * 100;
-            console.log(obj);
 
             return obj;
         });
@@ -233,7 +238,7 @@ class App extends Component {
                 <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
                 <CartesianGrid stroke="#ccc"/>
                 <XAxis dataKey="pair" label="Pair" name="Pair" type="number"/>
-                <YAxis dataKey="value" label="% of correct" type="number" />
+                <YAxis dataKey="value" type="number"/>
             </LineChart>
             {/*<p className="vertical-text">*/}
                 {/*Percentage of correct discrimination*/}
@@ -265,13 +270,11 @@ class App extends Component {
         });
 
 
-        console.log('run');
-
     }
 
     experimentTwoSetup() {
         var self = this;
-        console.log('experimentTwoSetup');
+
         /*
          Two stimuli, click 'same' or 'different', always separated by one vot
          EG: 1:3, 2:4, etc.
@@ -580,9 +583,12 @@ class App extends Component {
                 </p>
                 Click 'Start' to begin the first experiment.
                 <br />
-                <button className="btn btn-primary startButton" onClick={this.start}>Start The Identification
-                    Experiment
-                </button>
+                {this.state.canRun ?
+                    <button className="btn btn-primary startButton" onClick={this.start}>Start The Identification
+                        Experiment
+                    </button> :
+                    null
+                }
             </div>] : null;
         let experimentTwoShow = (this.state.experimentOneDone && !this.state.experimentTwoDone) ? [<div
                 className="well experimentTwo">
@@ -592,8 +598,11 @@ class App extends Component {
 
                 </p>
                 <br />
+                {this.state.canRun ?
                 <button className="btn btn-primary startButton" onClick={this.start}>Start the Discrimination Experiment
                 </button>
+                    : null
+                }
             </div>] : null;
         let finished = (this.state.experimentOneDone && this.state.experimentTwoDone) ? [
                 <div className="jumbotron">

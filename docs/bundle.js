@@ -29486,8 +29486,8 @@ var App = function (_Component) {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: true, //reset to false
-            experimentTwoDone: false
+            experimentOneDone: _this.props.experimentOneDone ? _this.props.experimentOneDone : false, //reset to false
+            experimentTwoDone: _this.props.experimentTwoDone ? _this.props.experimentTwoDone : false
         };
         _this.start = _this.start.bind(_this);
         _this.experimentOneSetup = _this.experimentOneSetup.bind(_this);
@@ -29716,8 +29716,10 @@ var App = function (_Component) {
             });
 
             var final = pairs.map(function (obj) {
-                obj.value = Number(obj.value) / self.props.experimentTwoRepetitions * 100;
-
+                var ret = obj.value / self.props.experimentTwoRepetitions * 100;
+                obj.value = ret;
+                obj.data = ret;
+                console.log("Returning:" + obj.value);
                 return obj;
             });
 
@@ -29731,7 +29733,7 @@ var App = function (_Component) {
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'answer', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
                     _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number' }),
-                    _react2.default.createElement(_recharts.YAxis, { dataKey: 'value', type: 'number' })
+                    _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number' })
                 ),
                 _react2.default.createElement(
                     'span',
@@ -30033,7 +30035,7 @@ var App = function (_Component) {
                     buttons = [self.sameButton(), self.differentButton()];
                 } else {
 
-                    buttons = [self.experimentOneChart(), self.experimentTwoChart()];
+                    buttons = [self.experimentTwoChart()];
                 }
             }
 
@@ -57481,7 +57483,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '2', logo: './logo.svg' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '5', logo: './logo.svg' }), document.getElementById('root'));
 
 /***/ })
 /******/ ]);

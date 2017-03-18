@@ -20,8 +20,8 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: true, //reset to false
-            experimentTwoDone: false,
+            experimentOneDone: this.props.experimentOneDone ? this.props.experimentOneDone : false, //reset to false
+            experimentTwoDone: this.props.experimentTwoDone ? this.props.experimentTwoDone: false,
         };
         this.start = this.start.bind(this);
         this.experimentOneSetup = this.experimentOneSetup.bind(this);
@@ -226,8 +226,10 @@ class App extends Component {
 
 
         let final = pairs.map(function(obj) {
-            obj.value = (Number(obj.value)/self.props.experimentTwoRepetitions) * 100;
-
+            let ret = (((obj.value)/self.props.experimentTwoRepetitions) * 100);
+            obj.value = ret;
+            obj.data = ret;
+            console.log("Returning:"+ obj.value);
             return obj;
         });
 
@@ -238,7 +240,7 @@ class App extends Component {
                 <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
                 <CartesianGrid stroke="#ccc"/>
                 <XAxis dataKey="pair" label="Pair" name="Pair" type="number"/>
-                <YAxis dataKey="value" type="number"/>
+                <YAxis dataKey="data" type="number"/>
             </LineChart>
             {/*<p className="vertical-text">*/}
                 {/*Percentage of correct discrimination*/}
@@ -570,7 +572,7 @@ class App extends Component {
                 buttons = [self.sameButton(), self.differentButton()]
             } else {
 
-                buttons = [self.experimentOneChart(), self.experimentTwoChart()]
+                buttons = [self.experimentTwoChart()]
             }
         }
 

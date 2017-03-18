@@ -1,0 +1,9 @@
+{
+  "soundPrefix": "pi",
+  "fileSuffix": ".wav",
+  "numSounds":"10",
+  "experimentOneRepetitions": 5,
+  "experimentTwoRepetitions": 5,
+
+  "logo":"./logo.svg"
+}

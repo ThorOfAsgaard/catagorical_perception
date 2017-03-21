@@ -29487,7 +29487,7 @@ var App = function (_Component) {
             sounds: [],
             running: false,
             experimentOneDone: _this.props.experimentOneDone ? _this.props.experimentOneDone : false, //reset to false
-            experimentTwoDone: _this.props.experimentTwoDone ? _this.props.experimentTwoDone : false
+            experimentTwoDone: true
         };
         _this.start = _this.start.bind(_this);
         _this.experimentOneSetup = _this.experimentOneSetup.bind(_this);
@@ -29515,7 +29515,6 @@ var App = function (_Component) {
                 a.src = './wavs/' + this.state.soundPrefix + i + '.wav';
                 a.addEventListener('canplaythrough', function () {
                     self.setState({ canRun: true });
-                    console.log('loaded');
                 });
                 a.id = this.state.soundPrefix + i;
                 a.load();
@@ -29523,9 +29522,7 @@ var App = function (_Component) {
                 sounds.push(a);
             }
 
-            this.setState({ sounds: sounds }, function () {
-                console.log(this.state.sounds);
-            });
+            this.setState({ sounds: sounds }, function () {});
         }
     }, {
         key: 'bButton',
@@ -29633,7 +29630,7 @@ var App = function (_Component) {
             this.state.experimentOneResults.map(function (obj) {
 
                 var ret = {};
-                if (obj.answer === "/p/") {
+                if (obj.answer === "/b/") {
 
                     for (var i in d) {
                         if (d[i].hasOwnProperty(obj.sound1.id)) {
@@ -29655,8 +29652,10 @@ var App = function (_Component) {
             });
             var data = d.map(function (obj, index) {
 
-                return { answer: d[obj], vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10 };
+                console.log(obj);
+                return { answer: Number(d[obj] / self.props.experimentOneRepetitions) * 100, vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10 };
             });
+            console.log(data);
             return _react2.default.createElement(
                 'div',
                 { className: 'col-md-6 col-lg-6 col-sm-12 col-xs-12' },
@@ -29666,12 +29665,12 @@ var App = function (_Component) {
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'answer', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
                     _react2.default.createElement(_recharts.XAxis, { dataKey: 'vot', label: 'VOT', name: 'VOT' }),
-                    _react2.default.createElement(_recharts.YAxis, { dataKey: 'answer', label: 'Number of /pi/ responses' })
+                    _react2.default.createElement(_recharts.YAxis, { dataKey: 'answer', label: 'Number of /pi/ responses', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
                     'span',
                     { className: 'pull-left vertical-text' },
-                    'Number of /pi/ Responses'
+                    'percentage of /b/ Responses'
                 ),
                 _react2.default.createElement('br', null),
                 _react2.default.createElement(
@@ -29730,10 +29729,10 @@ var App = function (_Component) {
                 _react2.default.createElement(
                     _recharts.LineChart,
                     { width: 400, height: 400, data: final },
-                    _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'answer', stroke: '#8884d8' }),
+                    _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'data', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
                     _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number' }),
-                    _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number' })
+                    _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number', label: 'data', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
                     'span',
@@ -57483,7 +57482,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '5', logo: './logo.svg' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '2', fileSuffix: '.wav', experimentTwoRepetitions: '2', logo: './logo.svg' }), document.getElementById('root'));
 
 /***/ })
 /******/ ]);

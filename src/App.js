@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 // import logo from './logo.svg';
 
 import '../node_modules/jquery/dist/jquery.min';
-import {LineChart, Line, XAxis, YAxis, CartesianGrid} from 'recharts';
+import {LineChart, Line, XAxis, YAxis, CartesianGrid, Text} from 'recharts';
 
 class App extends Component {
     constructor(props) {
@@ -21,7 +21,7 @@ class App extends Component {
             sounds: [],
             running: false,
             experimentOneDone: this.props.experimentOneDone ? this.props.experimentOneDone : false, //reset to false
-            experimentTwoDone: this.props.experimentTwoDone ? this.props.experimentTwoDone: false,
+            experimentTwoDone: true,
         };
         this.start = this.start.bind(this);
         this.experimentOneSetup = this.experimentOneSetup.bind(this);
@@ -35,6 +35,7 @@ class App extends Component {
 
     }
 
+
     getAssets() {
         let sounds = [];
 
@@ -46,7 +47,7 @@ class App extends Component {
             a.src = './wavs/' + this.state.soundPrefix + i + '.wav';
             a.addEventListener('canplaythrough', function() {
                 self.setState({canRun: true});
-               console.log('loaded');
+
             });
             a.id = this.state.soundPrefix + i;
             a.load();
@@ -56,7 +57,7 @@ class App extends Component {
         }
 
         this.setState({sounds: sounds}, function () {
-            console.log(this.state.sounds);
+
         });
 
     }
@@ -147,7 +148,7 @@ class App extends Component {
         this.state.experimentOneResults.map(function (obj) {
 
             let ret = {};
-            if (obj.answer === "/p/") {
+            if (obj.answer === "/b/") {
 
                 for (let i in d) {
                     if (d[i].hasOwnProperty(obj.sound1.id)) {
@@ -171,18 +172,19 @@ class App extends Component {
         });
         let data = d.map(function (obj, index) {
 
-
-            return {answer: d[obj], vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10}
+            console.log(obj);
+            return {answer: (Number(d[obj]/self.props.experimentOneRepetitions) * 100), vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10}
         });
+        console.log(data);
         return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 
                 <LineChart width={400} height={400} data={data}>
                     <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
                     <CartesianGrid stroke="#ccc"/>
                     <XAxis dataKey="vot" label="VOT" name="VOT"/>
-                    <YAxis dataKey="answer" label="Number of /pi/ responses"/>
+                    <YAxis dataKey="answer" label="Number of /pi/ responses" domain={[0,100]}/>
                 </LineChart>
-                <span className="pull-left vertical-text">Number of /pi/ Responses</span>
+                <span className="pull-left vertical-text">percentage of /b/ Responses</span>
                 <br />
                 <span className="center">VOT (msec)</span>
 
@@ -237,10 +239,11 @@ class App extends Component {
         return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 
             <LineChart width={400} height={400} data={final}>
-                <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
+                <Line type="monotone" dataKey="data" stroke="#8884d8"/>
                 <CartesianGrid stroke="#ccc"/>
                 <XAxis dataKey="pair" label="Pair" name="Pair" type="number"/>
-                <YAxis dataKey="data" type="number"/>
+                <YAxis dataKey="data" type="number" label="data" domain={[0,100]}/>
+
             </LineChart>
             {/*<p className="vertical-text">*/}
                 {/*Percentage of correct discrimination*/}

@@ -17,11 +17,13 @@ class App extends Component {
             experimentOne: [],
             experimentOneResults: [],
             experimentTwoResults: [],
+            experimentTwoPairs:[],
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: this.props.experimentOneDone ? this.props.experimentOneDone : true, //reset to false
+            experimentOneDone: this.props.experimentOneDone ? this.props.experimentOneDone : false, //reset to false
             experimentTwoDone: false,
+
         };
         this.start = this.start.bind(this);
         this.experimentOneSetup = this.experimentOneSetup.bind(this);

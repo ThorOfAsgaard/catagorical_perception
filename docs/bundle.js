@@ -29483,11 +29483,13 @@ var App = function (_Component) {
             experimentOne: [],
             experimentOneResults: [],
             experimentTwoResults: [],
+            experimentTwoPairs: [],
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: _this.props.experimentOneDone ? _this.props.experimentOneDone : true, //reset to false
+            experimentOneDone: _this.props.experimentOneDone ? _this.props.experimentOneDone : false, //reset to false
             experimentTwoDone: false
+
         };
         _this.start = _this.start.bind(_this);
         _this.experimentOneSetup = _this.experimentOneSetup.bind(_this);

@@ -29486,8 +29486,8 @@ var App = function (_Component) {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: _this.props.experimentOneDone ? _this.props.experimentOneDone : false, //reset to false
-            experimentTwoDone: true
+            experimentOneDone: _this.props.experimentOneDone ? _this.props.experimentOneDone : true, //reset to false
+            experimentTwoDone: false
         };
         _this.start = _this.start.bind(_this);
         _this.experimentOneSetup = _this.experimentOneSetup.bind(_this);
@@ -29647,8 +29647,6 @@ var App = function (_Component) {
                     d[Number(vot) - 1]++;
                     return vot;
                 } else {}
-                console.log("Numbers");
-                console.log(d);
             });
             var data = d.map(function (obj, index) {
 
@@ -29685,32 +29683,48 @@ var App = function (_Component) {
         value: function experimentTwoChart() {
             var self = this;
             var pairs = [];
-            var res = this.state.experimentTwoResults.map(function (obj) {
+            var res = this.state.experimentTwoResults.map(function (obj, index) {
                 var found = false;
-                pairs.map(function (o) {
+                var foundIndex = -1;
+                pairs.map(function (o, id) {
 
                     if (o.hasOwnProperty("pair") && o.pair === obj.pair) {
-                        console.log("found existing pair");
+
                         //noinspection JSAnnotator
 
                         var val = Number(o.value) + 1 || 1;
                         o.value = val;
                         found = true;
+                        foundIndex = id;
                     }
                 });
-                if (!obj.answer) {
-                    console.log('incrementing');
-                    obj.value = obj.value++ || 1;
-                }
-
-                if (found) {
-
-                    console.log("Found object");
-                    return obj;
+                //is only getting about 40% for some reason
+                var value = obj.value ? Number(obj.value) : 1;
+                var newObj = obj;
+                if (obj.answer) {
+                    value++;
+                    // newObj.value = value;
+                    // console.log("Incrementing:" + value);
                 } else {
-                    console.log("didn't find object, pushing to pairs");
+                    value = value - 1;
+                    // console.log("decrementing" + value);
 
-                    pairs.push(obj);
+                    // newObj.value = obj.value -1 || 0;
+                }
+                newObj.value = value;
+                if (found) {
+                    /**
+                     * Replaces the current object with the updated one.
+                     */
+                    pairs[foundIndex] = newObj;
+
+                    console.log("FOUND, Incrementing");
+
+                    console.log(foundIndex);
+                } else {
+                    console.log("NOT FOUND - Pushing");
+
+                    pairs.push(newObj);
                 }
             });
 
@@ -29718,7 +29732,7 @@ var App = function (_Component) {
                 var ret = obj.value / self.props.experimentTwoRepetitions * 100;
                 obj.value = ret;
                 obj.data = ret;
-                console.log("Returning:" + obj.value);
+
                 return obj;
             });
 
@@ -29734,6 +29748,12 @@ var App = function (_Component) {
                     _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number' }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number', label: 'data', domain: [0, 100] })
                 ),
+                _react2.default.createElement(
+                    'span',
+                    { className: 'pull-left vertical-text' },
+                    'percentage of /b/ Responses'
+                ),
+                _react2.default.createElement('br', null),
                 _react2.default.createElement(
                     'span',
                     { className: 'center' },
@@ -29798,25 +29818,22 @@ var App = function (_Component) {
     }, {
         key: 'pressSameButton',
         value: function pressSameButton() {
-            this.advanceExperimentTwo(true);
+            this.advanceExperimentTwo(false);
         }
     }, {
         key: 'pressDifferentButton',
         value: function pressDifferentButton() {
-            this.advanceExperimentTwo(false);
+            this.advanceExperimentTwo(true);
         }
     }, {
         key: 'advanceExperimentTwo',
         value: function advanceExperimentTwo(answer) {
-            /**
-             * Store
-             */
-            console.log(answer);
+
             $(".choiceButton").hide();
             var current = this.state.experimentTwoResults;
             var obj = current[this.state.question];
             obj.answer = answer;
-            console.log(obj);
+
             current[this.state.question] = obj;
             this.setState({ experimentTwoResults: current, question: this.state.question + 1 }, function () {
                 this.runExperimentTwo();
@@ -57482,7 +57499,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '2', fileSuffix: '.wav', experimentTwoRepetitions: '2', logo: './logo.svg' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '3', logo: './logo.svg' }), document.getElementById('root'));
 
 /***/ })
 /******/ ]);

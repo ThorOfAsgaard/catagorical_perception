@@ -20,8 +20,8 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: this.props.experimentOneDone ? this.props.experimentOneDone : false, //reset to false
-            experimentTwoDone: true,
+            experimentOneDone: this.props.experimentOneDone ? this.props.experimentOneDone : true, //reset to false
+            experimentTwoDone: false,
         };
         this.start = this.start.bind(this);
         this.experimentOneSetup = this.experimentOneSetup.bind(this);
@@ -167,8 +167,7 @@ class App extends Component {
             } else {
 
             }
-            console.log("Numbers");
-            console.log(d);
+
         });
         let data = d.map(function (obj, index) {
 
@@ -195,32 +194,50 @@ class App extends Component {
     experimentTwoChart() {
         let self = this;
         let pairs = [];
-        let res = this.state.experimentTwoResults.map(function(obj) {
+        let res = this.state.experimentTwoResults.map(function(obj,index) {
             let found = false;
-            pairs.map(function(o) {
+            let foundIndex = -1;
+            pairs.map(function(o,id) {
 
                 if(o.hasOwnProperty("pair") && o.pair === obj.pair) {
-                    console.log("found existing pair");
+
                     //noinspection JSAnnotator
 
                     let val = Number(o.value) +1 || 1;
                     o.value = val;
                     found=true;
+                    foundIndex = id;
                 }
-            })
-            if(!obj.answer) {
-                console.log('incrementing');
-                obj.value = obj.value ++ || 1;
-            }
-
-            if(found) {
-
-                console.log("Found object");
-                return(obj);
+            });
+            //is only getting about 40% for some reason
+            let value = obj.value ? Number(obj.value) : 1;
+            let newObj = obj;
+            if(obj.answer) {
+                value++;
+                // newObj.value = value;
+                // console.log("Incrementing:" + value);
             } else {
-                console.log("didn't find object, pushing to pairs");
+                value = value-1;
+                // console.log("decrementing" + value);
 
-                pairs.push(obj);
+                // newObj.value = obj.value -1 || 0;
+            }
+                newObj.value = value;
+            if(found) {
+                /**
+                 * Replaces the current object with the updated one.
+                 */
+                pairs[foundIndex] = newObj;
+
+                console.log("FOUND, Incrementing");
+
+                console.log(foundIndex);
+
+            } else {
+                console.log("NOT FOUND - Pushing");
+
+
+                pairs.push(newObj);
 
             }
 
@@ -231,7 +248,7 @@ class App extends Component {
             let ret = (((obj.value)/self.props.experimentTwoRepetitions) * 100);
             obj.value = ret;
             obj.data = ret;
-            console.log("Returning:"+ obj.value);
+
             return obj;
         });
 
@@ -245,6 +262,8 @@ class App extends Component {
                 <YAxis dataKey="data" type="number" label="data" domain={[0,100]}/>
 
             </LineChart>
+            <span className="pull-left vertical-text">percentage of /b/ Responses</span>
+            <br />
             {/*<p className="vertical-text">*/}
                 {/*Percentage of correct discrimination*/}
             {/*</p>*/}
@@ -312,24 +331,21 @@ class App extends Component {
     }
 
     pressSameButton() {
-        this.advanceExperimentTwo(true);
+        this.advanceExperimentTwo(false);
     }
 
     pressDifferentButton() {
-        this.advanceExperimentTwo(false);
+        this.advanceExperimentTwo(true);
 
     }
 
     advanceExperimentTwo(answer) {
-        /**
-         * Store
-         */
-        console.log(answer);
+
         $(".choiceButton").hide();
         let current = this.state.experimentTwoResults;
         let obj = current[this.state.question];
         obj.answer = answer;
-        console.log(obj);
+
         current[this.state.question] = obj;
         this.setState({experimentTwoResults: current, question: this.state.question + 1}, function () {
             this.runExperimentTwo();

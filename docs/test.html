@@ -91,7 +91,9 @@
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
+        var ret =Math.floor(Math.random() * (max - min)) +max;
+        console.log(ret);
+        return  ret;
     }
     function runExperimentOneTest() {
 
@@ -104,6 +106,7 @@
                     console.log(c);
                 c.click();
                 } else {
+                    console.log("Clearing interval");
                     clearInterval(running);
                 }
             }, 2000);

@@ -29480,6 +29480,7 @@ var App = function (_Component) {
             numSounds: props.numSounds,
             canRun: false,
             question: null,
+            questionObj: null,
             experimentOne: [],
             experimentOneResults: [],
             experimentTwoResults: [],
@@ -29488,7 +29489,8 @@ var App = function (_Component) {
             sounds: [],
             running: false,
             experimentOneDone: _this.props.experimentOneDone ? _this.props.experimentOneDone : false, //reset to false
-            experimentTwoDone: false
+            experimentTwoDone: false,
+            experimentTwoArray: []
 
         };
         _this.start = _this.start.bind(_this);
@@ -29684,60 +29686,14 @@ var App = function (_Component) {
         key: 'experimentTwoChart',
         value: function experimentTwoChart() {
             var self = this;
-            var pairs = [];
-            var res = this.state.experimentTwoResults.map(function (obj, index) {
-                var found = false;
-                var foundIndex = -1;
-                pairs.map(function (o, id) {
 
-                    if (o.hasOwnProperty("pair") && o.pair === obj.pair) {
-
-                        //noinspection JSAnnotator
-
-                        var val = Number(o.value) + 1 || 1;
-                        o.value = val;
-                        found = true;
-                        foundIndex = id;
-                    }
-                });
-                //is only getting about 40% for some reason
-                var value = obj.value ? Number(obj.value) : 1;
-                var newObj = obj;
-                if (obj.answer) {
-                    value++;
-                    // newObj.value = value;
-                    // console.log("Incrementing:" + value);
-                } else {
-                    value = value - 1;
-                    // console.log("decrementing" + value);
-
-                    // newObj.value = obj.value -1 || 0;
-                }
-                newObj.value = value;
-                if (found) {
-                    /**
-                     * Replaces the current object with the updated one.
-                     */
-                    pairs[foundIndex] = newObj;
-
-                    console.log("FOUND, Incrementing");
-
-                    console.log(foundIndex);
-                } else {
-                    console.log("NOT FOUND - Pushing");
-
-                    pairs.push(newObj);
-                }
-            });
-
-            var final = pairs.map(function (obj) {
-                var ret = obj.value / self.props.experimentTwoRepetitions * 100;
-                obj.value = ret;
-                obj.data = ret;
-
+            console.log(this.state.experimentTwoArray);
+            var final = this.state.experimentTwoArray.map(function (num, index) {
+                var obj = {};
+                obj.pair = index + 1;
+                obj.data = num / self.props.experimentTwoRepetitions * 100;
                 return obj;
             });
-
             console.log(final);
             return _react2.default.createElement(
                 'div',
@@ -29747,7 +29703,7 @@ var App = function (_Component) {
                     { width: 400, height: 400, data: final },
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'data', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number' }),
+                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', ticks: '1', label: 'Pair', name: 'Pair', type: 'number' }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number', label: 'data', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
@@ -29803,6 +29759,7 @@ var App = function (_Component) {
                     array.push(pairs[x]);
                 }
             }
+            array = App.shuffle(array);
             this.setState({ experimentTwo: array, question: 0 }, function () {
                 self.runExperimentTwo();
             });
@@ -29834,6 +29791,15 @@ var App = function (_Component) {
             $(".choiceButton").hide();
             var current = this.state.experimentTwoResults;
             var obj = current[this.state.question];
+            console.log(obj);
+            var currentArray = this.state.experimentTwoArray;
+            if (answer) {
+
+                var ans = currentArray[Number(obj.pair) - 1] || 0;
+                ans++;
+                currentArray[Number(obj.pair) - 1] = ans;
+                this.setState({ experimentTwoArray: currentArray });
+            }
             obj.answer = answer;
 
             current[this.state.question] = obj;
@@ -29931,6 +29897,8 @@ var App = function (_Component) {
         value: function experimentTwoPlay(question) {
 
             $(".choiceButton").hide();
+            var current = this.state.experimentTwo[question];
+            this.setState({ questionObj: current });
             var audio = this.state.experimentTwo[question].sound1;
             console.log(audio);
             var audio2 = this.state.experimentTwo[question].sound2;
@@ -30059,7 +30027,7 @@ var App = function (_Component) {
 
             var experimentOneShow = !this.state.experimentOneDone ? [_react2.default.createElement(
                 'div',
-                { className: 'well experimentOne' },
+                { className: 'jumbotron experimentOne' },
                 _react2.default.createElement(
                     'h1',
                     null,
@@ -30081,7 +30049,7 @@ var App = function (_Component) {
             var experimentTwoShow = this.state.experimentOneDone && !this.state.experimentTwoDone ? [_react2.default.createElement(
                 'div',
                 {
-                    className: 'well experimentTwo' },
+                    className: 'jumbotron experimentTwo' },
                 _react2.default.createElement(
                     'h1',
                     null,
@@ -30112,30 +30080,30 @@ var App = function (_Component) {
             )] : null;
             return _react2.default.createElement(
                 'div',
-                { className: '' },
+                { className: 'container-fluid' },
                 _react2.default.createElement(
                     'div',
-                    { className: 'App container' },
+                    { className: 'App-header' },
                     _react2.default.createElement(
-                        'div',
-                        { className: 'App-header' },
+                        'h2',
+                        null,
                         _react2.default.createElement('img', { src: './logo.svg', className: 'App-logo', alt: 'logo' }),
-                        _react2.default.createElement(
-                            'h2',
-                            null,
-                            'Jongman Categorical Perception Experiment'
-                        )
-                    ),
+                        ' Jongman Categorical Perception Experiment'
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'App-intro container' },
+                    experimentOneShow,
+                    experimentTwoShow,
+                    finished,
                     _react2.default.createElement(
                         'div',
-                        { className: 'App-intro container' },
-                        experimentOneShow,
-                        experimentTwoShow,
-                        finished
-                    ),
-                    _react2.default.createElement('br', null),
-                    buttons
+                        { className: 'text-center' },
+                        buttons
+                    )
                 ),
+                _react2.default.createElement('br', null),
                 this.footer()
             );
         }
@@ -57501,7 +57469,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '3', logo: './logo.svg' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '5', logo: './logo.svg' }), document.getElementById('root'));
 
 /***/ })
 /******/ ]);

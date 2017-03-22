@@ -14,6 +14,7 @@ class App extends Component {
             numSounds: props.numSounds,
             canRun: false,
             question: null,
+            questionObj: null,
             experimentOne: [],
             experimentOneResults: [],
             experimentTwoResults: [],
@@ -23,6 +24,7 @@ class App extends Component {
             running: false,
             experimentOneDone: this.props.experimentOneDone ? this.props.experimentOneDone : false, //reset to false
             experimentTwoDone: false,
+            experimentTwoArray: [],
 
         };
         this.start = this.start.bind(this);
@@ -195,72 +197,21 @@ class App extends Component {
 
     experimentTwoChart() {
         let self = this;
-        let pairs = [];
-        let res = this.state.experimentTwoResults.map(function(obj,index) {
-            let found = false;
-            let foundIndex = -1;
-            pairs.map(function(o,id) {
 
-                if(o.hasOwnProperty("pair") && o.pair === obj.pair) {
-
-                    //noinspection JSAnnotator
-
-                    let val = Number(o.value) +1 || 1;
-                    o.value = val;
-                    found=true;
-                    foundIndex = id;
-                }
-            });
-            //is only getting about 40% for some reason
-            let value = obj.value ? Number(obj.value) : 1;
-            let newObj = obj;
-            if(obj.answer) {
-                value++;
-                // newObj.value = value;
-                // console.log("Incrementing:" + value);
-            } else {
-                value = value-1;
-                // console.log("decrementing" + value);
-
-                // newObj.value = obj.value -1 || 0;
-            }
-                newObj.value = value;
-            if(found) {
-                /**
-                 * Replaces the current object with the updated one.
-                 */
-                pairs[foundIndex] = newObj;
-
-                console.log("FOUND, Incrementing");
-
-                console.log(foundIndex);
-
-            } else {
-                console.log("NOT FOUND - Pushing");
-
-
-                pairs.push(newObj);
-
-            }
-
-        })
-
-
-        let final = pairs.map(function(obj) {
-            let ret = (((obj.value)/self.props.experimentTwoRepetitions) * 100);
-            obj.value = ret;
-            obj.data = ret;
-
-            return obj;
+        console.log(this.state.experimentTwoArray);
+        let final = this.state.experimentTwoArray.map(function(num, index) {
+           let obj = {};
+           obj.pair = index+1;
+           obj.data = (num / self.props.experimentTwoRepetitions) * 100;
+           return obj;
         });
-
         console.log(final);
         return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
 
             <LineChart width={400} height={400} data={final}>
                 <Line type="monotone" dataKey="data" stroke="#8884d8"/>
                 <CartesianGrid stroke="#ccc"/>
-                <XAxis dataKey="pair" label="Pair" name="Pair" type="number"/>
+                <XAxis dataKey="pair" ticks="1" label="Pair" name="Pair" type="number"/>
                 <YAxis dataKey="data" type="number" label="data" domain={[0,100]}/>
 
             </LineChart>
@@ -318,6 +269,7 @@ class App extends Component {
                 array.push(pairs[x]);
             }
         }
+        array = App.shuffle(array);
         this.setState({experimentTwo: array, question: 0}, function () {
             self.runExperimentTwo()
         });
@@ -346,6 +298,16 @@ class App extends Component {
         $(".choiceButton").hide();
         let current = this.state.experimentTwoResults;
         let obj = current[this.state.question];
+        console.log(obj);
+        let currentArray = this.state.experimentTwoArray;
+        if(answer) {
+
+            let ans = currentArray[Number(obj.pair)-1] || 0;
+            ans++;
+            currentArray[Number(obj.pair)-1] = ans;
+            this.setState({experimentTwoArray: currentArray});
+
+        }
         obj.answer = answer;
 
         current[this.state.question] = obj;
@@ -442,6 +404,8 @@ class App extends Component {
     experimentTwoPlay(question) {
 
         $(".choiceButton").hide();
+        let current = this.state.experimentTwo[question];
+        this.setState({questionObj: current});
         let audio = this.state.experimentTwo[question].sound1;
         console.log(audio);
         let audio2 =this.state.experimentTwo[question].sound2;
@@ -597,7 +561,7 @@ class App extends Component {
             }
         }
 
-        let experimentOneShow = !this.state.experimentOneDone ? [<div className="well experimentOne">
+        let experimentOneShow = !this.state.experimentOneDone ? [<div className="jumbotron experimentOne">
                 <h1>Experiment One - Identification</h1>
                 <p>
                     In this first experiment, you will hear a number of speech sounds. On each trial, please indicate whether you think the sound you heard sounds more like 'p' or more like 'b'. When in doubt, please guess. After each decision, the experiment will automatically advance to the next trial.
@@ -614,7 +578,7 @@ class App extends Component {
                 }
             </div>] : null;
         let experimentTwoShow = (this.state.experimentOneDone && !this.state.experimentTwoDone) ? [<div
-                className="well experimentTwo">
+                className="jumbotron experimentTwo">
                 <h1>Experiment Two - Discrimination</h1>
                 <p>
                     In this second experiment, you will hear two sounds on each trial. Your task is to indicate if the two sounds are the same or different. After each decision, the experiment will automatically advance to the next trial.Click 'Start' to begin the second experiment.
@@ -639,11 +603,11 @@ class App extends Component {
 
             ] : null;
         return (
-            <div className="">
-                <div className="App container">
+
+                <div className="container-fluid">
                     <div className="App-header">
-                        <img src="./logo.svg" className="App-logo" alt="logo"/>
-                        <h2>Jongman Categorical Perception Experiment</h2>
+
+                        <h2><img src="./logo.svg" className="App-logo" alt="logo"/> Jongman Categorical Perception Experiment</h2>
                     </div>
                     <div className="App-intro container">
                         {experimentOneShow}
@@ -651,12 +615,15 @@ class App extends Component {
                         {experimentTwoShow}
 
                         {finished}
+                        <div className="text-center">
+                        {buttons}
+                        </div>
+
                     </div>
 
                     <br />
-                    {buttons}
 
-                </div>
+
                 {this.footer()}
             </div>
         );
@@ -664,3 +631,4 @@ class App extends Component {
 }
 
 export default App;
+

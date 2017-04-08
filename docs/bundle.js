@@ -29703,7 +29703,7 @@ var App = function (_Component) {
                     { width: 400, height: 400, data: final },
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'data', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', ticks: '1', label: 'Pair', name: 'Pair', type: 'number' }),
+                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number' }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number', label: 'data', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
@@ -29793,19 +29793,23 @@ var App = function (_Component) {
             var obj = current[this.state.question];
             console.log(obj);
             var currentArray = this.state.experimentTwoArray;
+
             if (answer) {
-
-                var ans = currentArray[Number(obj.pair) - 1] || 0;
-                ans++;
-                currentArray[Number(obj.pair) - 1] = ans;
-                this.setState({ experimentTwoArray: currentArray });
+                console.log(obj);
+                try {
+                    var ans = currentArray[Number(obj.pair) - 1] || 0;
+                    ans++;
+                    currentArray[Number(obj.pair) - 1] = ans;
+                    this.setState({ experimentTwoArray: currentArray });
+                    obj.answer = answer;
+                    current[this.state.question] = obj;
+                    this.setState({ experimentTwoResults: current, question: this.state.question + 1 }, function () {
+                        this.runExperimentTwo();
+                    });
+                } catch (e) {
+                    console.log(e);
+                }
             }
-            obj.answer = answer;
-
-            current[this.state.question] = obj;
-            this.setState({ experimentTwoResults: current, question: this.state.question + 1 }, function () {
-                this.runExperimentTwo();
-            });
         }
     }, {
         key: 'advanceExperimentOne',
@@ -57469,7 +57473,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '5', fileSuffix: '.wav', experimentTwoRepetitions: '5', logo: './logo.svg' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '2', fileSuffix: '.wav', experimentTwoRepetitions: '2', logo: './logo.svg' }), document.getElementById('root'));
 
 /***/ })
 /******/ ]);

@@ -211,7 +211,7 @@ class App extends Component {
             <LineChart width={400} height={400} data={final}>
                 <Line type="monotone" dataKey="data" stroke="#8884d8"/>
                 <CartesianGrid stroke="#ccc"/>
-                <XAxis dataKey="pair" ticks="1" label="Pair" name="Pair" type="number"/>
+                <XAxis dataKey="pair" label="Pair" name="Pair" type="number"/>
                 <YAxis dataKey="data" type="number" label="data" domain={[0,100]}/>
 
             </LineChart>
@@ -300,20 +300,27 @@ class App extends Component {
         let obj = current[this.state.question];
         console.log(obj);
         let currentArray = this.state.experimentTwoArray;
-        if(answer) {
 
-            let ans = currentArray[Number(obj.pair)-1] || 0;
-            ans++;
-            currentArray[Number(obj.pair)-1] = ans;
-            this.setState({experimentTwoArray: currentArray});
+        if(answer) {
+            console.log(obj);
+            try {
+                let ans = currentArray[Number(obj.pair) - 1] || 0;
+                ans++;
+                currentArray[Number(obj.pair) - 1] = ans;
+                this.setState({experimentTwoArray: currentArray});
+                obj.answer = answer;
+                current[this.state.question] = obj;
+                this.setState({experimentTwoResults: current, question: this.state.question + 1}, function () {
+                    this.runExperimentTwo();
+                })
+            } catch (e) {
+                console.log(e);
+            }
 
         }
-        obj.answer = answer;
 
-        current[this.state.question] = obj;
-        this.setState({experimentTwoResults: current, question: this.state.question + 1}, function () {
-            this.runExperimentTwo();
-        })
+
+
     }
 
     advanceExperimentOne(answer) {

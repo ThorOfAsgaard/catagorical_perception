@@ -91,7 +91,7 @@
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
-        var ret =Math.floor(Math.random() * (max - min)) +max;
+        var ret =Math.round(Math.random() * (max - min)) +max;
         console.log(ret);
         return  ret;
     }
@@ -99,10 +99,13 @@
 
     }
     function runExperimentTwoTest() {
+        if($(".startButton").length <1) {
+            return;
+        }
             $(".startButton").click();
             running = setInterval(function() {
                 if($(".choiceButton").length > 0) {
-                    let c = $(".choiceButton")[getRandomInt(0,1)];
+                    let c = $(".choiceButton")[Math.round(Math.random())];
                     console.log(c);
                 c.click();
                 } else {

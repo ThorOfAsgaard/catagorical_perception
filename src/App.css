@@ -1,7 +1,10 @@
 .App {
   text-align: center;
 }
-
+.vertical-text {
+  transform: rotate(-90deg);
+  transform-origin: -20%;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;

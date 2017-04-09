@@ -1,0 +1,1 @@
+webpack && copy .\bin\bundle.js .\docs

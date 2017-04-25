@@ -22,8 +22,8 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: true, //reset to false
-            experimentTwoDone: true,
+            experimentOneDone: false, //reset to false
+            experimentTwoDone: false,
             experimentTwoArray: [],
 
         };
@@ -186,12 +186,12 @@ class App extends Component {
                 <LineChart width={400} height={400} data={data}>
                     <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
                     <CartesianGrid stroke="#ccc"/>
-                    <XAxis dataKey="vot" label="VOT" name="VOT"/>
+                    <XAxis dataKey="vot" label="VOT" name="VOT" domain={[1,10]}/>
                     <YAxis dataKey="answer" label="Number of /pi/ responses" domain={[0,100]}/>
                 </LineChart>
-                <span className="pull-left vertical-text">percentage of /b/ Responses</span>
+                <span className="pull-left vertical-text">Percentage of /b/ responses</span>
                 <br />
-                <span className="center">VOT (msec)</span>
+                <span className="center">Stimulus member</span>
 
             </div>
         )
@@ -214,16 +214,16 @@ class App extends Component {
             <LineChart width={400} height={400} data={final}>
                 <Line type="monotone" dataKey="data" stroke="#8884d8"/>
                 <CartesianGrid stroke="#ccc"/>
-                <XAxis dataKey="pair" label="Pair" name="Pair" type="number"/>
+                <XAxis dataKey="pair" label="Pair" name="Pair" type="number" domain={[1,8]}/>
                 <YAxis dataKey="data" type="number" label="data" domain={[0,100]}/>
 
             </LineChart>
-            <span className="pull-left vertical-text">percentage of /b/ Responses</span>
+            <span className="pull-left vertical-text">percentage of correct discrimination</span>
             <br />
             {/*<p className="vertical-text">*/}
                 {/*Percentage of correct discrimination*/}
             {/*</p>*/}
-            <span className="center">Pair</span>
+            <span className="center">Stimulus Pair</span>
 
 
 

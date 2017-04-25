@@ -29488,8 +29488,8 @@ var App = function (_Component) {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: true, //reset to false
-            experimentTwoDone: true,
+            experimentOneDone: false, //reset to false
+            experimentTwoDone: false,
             experimentTwoArray: []
 
         };
@@ -29668,19 +29668,19 @@ var App = function (_Component) {
                     { width: 400, height: 400, data: data },
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'answer', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'vot', label: 'VOT', name: 'VOT' }),
+                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'vot', label: 'VOT', name: 'VOT', domain: [1, 10] }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'answer', label: 'Number of /pi/ responses', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
                     'span',
                     { className: 'pull-left vertical-text' },
-                    'percentage of /b/ Responses'
+                    'Percentage of /b/ responses'
                 ),
                 _react2.default.createElement('br', null),
                 _react2.default.createElement(
                     'span',
                     { className: 'center' },
-                    'VOT (msec)'
+                    'Stimulus member'
                 )
             );
         }
@@ -29706,19 +29706,19 @@ var App = function (_Component) {
                     { width: 400, height: 400, data: final },
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'data', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number' }),
+                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number', domain: [1, 8] }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number', label: 'data', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
                     'span',
                     { className: 'pull-left vertical-text' },
-                    'percentage of /b/ Responses'
+                    'percentage of correct discrimination'
                 ),
                 _react2.default.createElement('br', null),
                 _react2.default.createElement(
                     'span',
                     { className: 'center' },
-                    'Pair'
+                    'Stimulus Pair'
                 )
             );
         }

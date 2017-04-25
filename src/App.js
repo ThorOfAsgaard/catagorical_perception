@@ -22,7 +22,7 @@ class App extends Component {
             experimentTwo: {},
             sounds: [],
             running: false,
-            experimentOneDone: false, //reset to false
+            experimentOneDone: true, //reset to false
             experimentTwoDone: true,
             experimentTwoArray: [],
 

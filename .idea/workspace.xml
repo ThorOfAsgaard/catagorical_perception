@@ -4,7 +4,6 @@
     <list default="true" id="78b78f26-1009-4e1d-8ad9-579d6ae58f02" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/bundle.js" afterPath="$PROJECT_DIR$/bin/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/bundle.js" afterPath="$PROJECT_DIR$/docs/bundle.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
@@ -86,113 +85,113 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="33" selection-end-line="168" selection-end-column="33" />
+            <state relative-caret-position="391">
+              <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding>
                 <element signature="n#!!block;n#getAssets#0;n#App#0" expanded="false" />
-                <element signature="e#1608#2010#0" expanded="false" />
-                <element signature="e#1836#1899#0" expanded="false" />
-                <element signature="e#2064#2076#0" expanded="false" />
+                <element signature="e#1607#2009#0" expanded="false" />
+                <element signature="e#1835#1898#0" expanded="false" />
+                <element signature="e#2063#2075#0" expanded="false" />
                 <element signature="n#!!block;n#bButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#pButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#sameButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#differentButton#0;n#App#0" expanded="false" />
-                <element signature="e#2718#2850#0" expanded="false" />
+                <element signature="e#2717#2849#0" expanded="false" />
                 <element signature="n#!!block;n#componentDidMount#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#componentWillMount#0;n#App#0" expanded="false" />
-                <element signature="e#3145#3239#0" expanded="false" />
-                <element signature="e#3312#3440#0" expanded="false" />
-                <element signature="e#3446#3458#0" expanded="false" />
+                <element signature="e#3144#3238#0" expanded="false" />
+                <element signature="e#3311#3439#0" expanded="false" />
+                <element signature="e#3445#3457#0" expanded="false" />
                 <element signature="n#!!block;n#footer#0;n#App#0" expanded="false" />
-                <element signature="e#3501#3720#0" expanded="false" />
-                <element signature="e#3573#3705#0" expanded="false" />
-                <element signature="e#3789#3874#0" expanded="false" />
-                <element signature="e#4832#5024#0" expanded="false" />
-                <element signature="e#5070#5706#0" expanded="false" />
-                <element signature="e#5143#5511#0" expanded="false" />
+                <element signature="e#3500#3719#0" expanded="false" />
+                <element signature="e#3572#3704#0" expanded="false" />
+                <element signature="e#3788#3873#0" expanded="false" />
+                <element signature="e#4831#5023#0" expanded="false" />
+                <element signature="e#5069#5705#0" expanded="false" />
+                <element signature="e#5142#5510#0" expanded="false" />
                 <element signature="n#!!block;n#experimentTwoChart#0;n#App#0" expanded="false" />
-                <element signature="e#5904#6097#0" expanded="false" />
-                <element signature="e#6144#6876#0" expanded="false" />
-                <element signature="e#6213#6570#0" expanded="false" />
-                <element signature="e#6692#6725#0" expanded="false" />
-                <element signature="e#6744#6784#0" expanded="false" />
-                <element signature="e#6799#6807#0" expanded="false" />
+                <element signature="e#5903#6096#0" expanded="false" />
+                <element signature="e#6143#6875#0" expanded="false" />
+                <element signature="e#6212#6569#0" expanded="false" />
+                <element signature="e#6691#6724#0" expanded="false" />
+                <element signature="e#6743#6783#0" expanded="false" />
+                <element signature="e#6798#6806#0" expanded="false" />
                 <element signature="n#!!block;n#experimentOneSetup#0;n#App#0" expanded="false" />
-                <element signature="e#7152#7270#0" expanded="false" />
-                <element signature="e#7206#7260#0" expanded="false" />
-                <element signature="e#7313#7455#0" expanded="false" />
-                <element signature="e#7388#7444#0" expanded="false" />
+                <element signature="e#7151#7269#0" expanded="false" />
+                <element signature="e#7205#7259#0" expanded="false" />
+                <element signature="e#7312#7454#0" expanded="false" />
+                <element signature="e#7387#7443#0" expanded="false" />
                 <element signature="n#!!block;n#experimentTwoSetup#0;n#App#0" expanded="false" />
-                <element signature="e#7528#7715#0" expanded="false" />
-                <element signature="e#7967#8083#0" expanded="false" />
-                <element signature="e#8020#8073#0" expanded="false" />
-                <element signature="e#8191#8238#0" expanded="false" />
+                <element signature="e#7527#7714#0" expanded="false" />
+                <element signature="e#7966#8082#0" expanded="false" />
+                <element signature="e#8019#8072#0" expanded="false" />
+                <element signature="e#8190#8237#0" expanded="false" />
                 <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-                <element signature="e#8852#9470#0" expanded="false" />
-                <element signature="e#8900#9401#0" expanded="false" />
-                <element signature="e#9322#9386#0" expanded="false" />
-                <element signature="e#9412#9459#0" expanded="false" />
+                <element signature="e#8851#9469#0" expanded="false" />
+                <element signature="e#8899#9400#0" expanded="false" />
+                <element signature="e#9321#9385#0" expanded="false" />
+                <element signature="e#9411#9458#0" expanded="false" />
                 <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-                <element signature="e#9830#9878#0" expanded="false" />
+                <element signature="e#9829#9877#0" expanded="false" />
                 <element signature="n#!!block;n#runExperimentTwo#0;n#App#0" expanded="false" />
-                <element signature="e#10089#10147#0" expanded="false" />
-                <element signature="e#10153#10324#0" expanded="false" />
-                <element signature="e#10236#10313#0" expanded="false" />
+                <element signature="e#10088#10146#0" expanded="false" />
+                <element signature="e#10152#10323#0" expanded="false" />
+                <element signature="e#10235#10312#0" expanded="false" />
                 <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-                <element signature="e#10533#10591#0" expanded="false" />
-                <element signature="e#10597#10794#0" expanded="false" />
-                <element signature="e#10680#10762#0" expanded="false" />
+                <element signature="e#10532#10590#0" expanded="false" />
+                <element signature="e#10596#10793#0" expanded="false" />
+                <element signature="e#10679#10761#0" expanded="false" />
                 <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-                <element signature="e#11304#11361#0" expanded="false" />
-                <element signature="e#11416#11466#0" expanded="false" />
+                <element signature="e#11303#11360#0" expanded="false" />
+                <element signature="e#11415#11465#0" expanded="false" />
                 <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-                <element signature="e#12235#12265#0" expanded="false" />
-                <element signature="e#12529#12929#0" expanded="false" />
-                <element signature="e#12612#12834#0" expanded="false" />
-                <element signature="e#12870#12912#0" expanded="false" />
-                <element signature="e#12990#13032#0" expanded="false" />
+                <element signature="e#12234#12264#0" expanded="false" />
+                <element signature="e#12528#12928#0" expanded="false" />
+                <element signature="e#12611#12833#0" expanded="false" />
+                <element signature="e#12869#12911#0" expanded="false" />
+                <element signature="e#12989#13031#0" expanded="false" />
                 <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#createPairs#0;n#App#0" expanded="false" />
-                <element signature="e#13433#13991#0" expanded="false" />
-                <element signature="e#13460#13510#0" expanded="false" />
-                <element signature="e#13561#13602#0" expanded="false" />
-                <element signature="e#13698#13780#0" expanded="false" />
-                <element signature="e#13786#13868#0" expanded="false" />
+                <element signature="e#13432#13990#0" expanded="false" />
+                <element signature="e#13459#13509#0" expanded="false" />
+                <element signature="e#13560#13601#0" expanded="false" />
+                <element signature="e#13697#13779#0" expanded="false" />
+                <element signature="e#13785#13867#0" expanded="false" />
                 <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
                 <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
-                <element signature="e#14186#14617#0" expanded="false" />
-                <element signature="e#14260#14446#0" expanded="false" />
-                <element signature="e#14490#14573#0" expanded="false" />
-                <element signature="e#14642#14688#0" expanded="false" />
-                <element signature="e#14702#14746#0" expanded="false" />
+                <element signature="e#14185#14616#0" expanded="false" />
+                <element signature="e#14259#14445#0" expanded="false" />
+                <element signature="e#14489#14572#0" expanded="false" />
+                <element signature="e#14641#14687#0" expanded="false" />
+                <element signature="e#14701#14745#0" expanded="false" />
                 <element signature="n#!!block;n#shuffle#0;n#App#0" expanded="false" />
-                <element signature="e#14945#15306#0" expanded="false" />
-                <element signature="e#15323#15357#0" expanded="false" />
+                <element signature="e#14944#15305#0" expanded="false" />
+                <element signature="e#15322#15356#0" expanded="false" />
                 <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
-                <element signature="e#15488#15855#0" expanded="false" />
-                <element signature="e#15537#15611#0" expanded="false" />
-                <element signature="e#15684#15769#0" expanded="false" />
-                <element signature="e#15775#15845#0" expanded="false" />
-                <element signature="e#15921#16734#0" expanded="false" />
-                <element signature="e#15922#16733#0" expanded="false" />
-                <element signature="e#16037#16369#0" expanded="false" />
-                <element signature="e#16511#16669#0" expanded="false" />
-                <element signature="e#16841#17554#0" expanded="false" />
-                <element signature="e#16842#17553#0" expanded="false" />
-                <element signature="e#16973#17282#0" expanded="false" />
-                <element signature="e#17359#17489#0" expanded="false" />
-                <element signature="e#17651#17881#0" expanded="false" />
-                <element signature="e#17669#17865#0" expanded="false" />
-                <element signature="e#17924#18576#0" expanded="false" />
-                <element signature="e#17978#18165#0" expanded="false" />
-                <element signature="e#18186#18495#0" expanded="false" />
-                <element signature="e#18373#18467#0" expanded="false" />
+                <element signature="e#15487#15854#0" expanded="false" />
+                <element signature="e#15536#15610#0" expanded="false" />
+                <element signature="e#15683#15768#0" expanded="false" />
+                <element signature="e#15774#15844#0" expanded="false" />
+                <element signature="e#15920#16733#0" expanded="false" />
+                <element signature="e#15921#16732#0" expanded="false" />
+                <element signature="e#16036#16368#0" expanded="false" />
+                <element signature="e#16510#16668#0" expanded="false" />
+                <element signature="e#16840#17553#0" expanded="false" />
+                <element signature="e#16841#17552#0" expanded="false" />
+                <element signature="e#16972#17281#0" expanded="false" />
+                <element signature="e#17358#17488#0" expanded="false" />
+                <element signature="e#17650#17880#0" expanded="false" />
+                <element signature="e#17668#17864#0" expanded="false" />
+                <element signature="e#17923#18575#0" expanded="false" />
+                <element signature="e#17977#18164#0" expanded="false" />
+                <element signature="e#18185#18494#0" expanded="false" />
+                <element signature="e#18372#18466#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -252,7 +251,7 @@
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="67" lean-forward="false" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+              <caret line="6" column="115" lean-forward="false" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="115" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -464,12 +463,12 @@
       <workItem from="1491685106138" duration="1531000" />
       <workItem from="1491779336278" duration="5897000" />
       <workItem from="1493043354372" duration="77000" />
-      <workItem from="1493080358460" duration="934000" />
+      <workItem from="1493080358460" duration="1723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33738000" />
+    <option name="totallyTimeSpent" value="34527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="5352" y="-8" width="1936" height="1056" extended-state="6" />
@@ -610,109 +609,109 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#getAssets#0;n#App#0" expanded="false" />
-            <element signature="e#1608#2010#0" expanded="false" />
-            <element signature="e#1836#1899#0" expanded="false" />
-            <element signature="e#2064#2076#0" expanded="false" />
+            <element signature="e#1607#2009#0" expanded="false" />
+            <element signature="e#1835#1898#0" expanded="false" />
+            <element signature="e#2063#2075#0" expanded="false" />
             <element signature="n#!!block;n#bButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#sameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#differentButton#0;n#App#0" expanded="false" />
-            <element signature="e#2718#2850#0" expanded="false" />
+            <element signature="e#2717#2849#0" expanded="false" />
             <element signature="n#!!block;n#componentDidMount#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#componentWillMount#0;n#App#0" expanded="false" />
-            <element signature="e#3145#3239#0" expanded="false" />
-            <element signature="e#3312#3440#0" expanded="false" />
-            <element signature="e#3446#3458#0" expanded="false" />
+            <element signature="e#3144#3238#0" expanded="false" />
+            <element signature="e#3311#3439#0" expanded="false" />
+            <element signature="e#3445#3457#0" expanded="false" />
             <element signature="n#!!block;n#footer#0;n#App#0" expanded="false" />
-            <element signature="e#3501#3720#0" expanded="false" />
-            <element signature="e#3573#3705#0" expanded="false" />
-            <element signature="e#3789#3874#0" expanded="false" />
-            <element signature="e#4832#5024#0" expanded="false" />
-            <element signature="e#5070#5706#0" expanded="false" />
-            <element signature="e#5143#5511#0" expanded="false" />
+            <element signature="e#3500#3719#0" expanded="false" />
+            <element signature="e#3572#3704#0" expanded="false" />
+            <element signature="e#3788#3873#0" expanded="false" />
+            <element signature="e#4831#5023#0" expanded="false" />
+            <element signature="e#5069#5705#0" expanded="false" />
+            <element signature="e#5142#5510#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoChart#0;n#App#0" expanded="false" />
-            <element signature="e#5904#6097#0" expanded="false" />
-            <element signature="e#6144#6876#0" expanded="false" />
-            <element signature="e#6213#6570#0" expanded="false" />
-            <element signature="e#6692#6725#0" expanded="false" />
-            <element signature="e#6744#6784#0" expanded="false" />
-            <element signature="e#6799#6807#0" expanded="false" />
+            <element signature="e#5903#6096#0" expanded="false" />
+            <element signature="e#6143#6875#0" expanded="false" />
+            <element signature="e#6212#6569#0" expanded="false" />
+            <element signature="e#6691#6724#0" expanded="false" />
+            <element signature="e#6743#6783#0" expanded="false" />
+            <element signature="e#6798#6806#0" expanded="false" />
             <element signature="n#!!block;n#experimentOneSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7152#7270#0" expanded="false" />
-            <element signature="e#7206#7260#0" expanded="false" />
-            <element signature="e#7313#7455#0" expanded="false" />
-            <element signature="e#7388#7444#0" expanded="false" />
+            <element signature="e#7151#7269#0" expanded="false" />
+            <element signature="e#7205#7259#0" expanded="false" />
+            <element signature="e#7312#7454#0" expanded="false" />
+            <element signature="e#7387#7443#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7528#7715#0" expanded="false" />
-            <element signature="e#7967#8083#0" expanded="false" />
-            <element signature="e#8020#8073#0" expanded="false" />
-            <element signature="e#8191#8238#0" expanded="false" />
+            <element signature="e#7527#7714#0" expanded="false" />
+            <element signature="e#7966#8082#0" expanded="false" />
+            <element signature="e#8019#8072#0" expanded="false" />
+            <element signature="e#8190#8237#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8852#9470#0" expanded="false" />
-            <element signature="e#8900#9401#0" expanded="false" />
-            <element signature="e#9322#9386#0" expanded="false" />
-            <element signature="e#9412#9459#0" expanded="false" />
+            <element signature="e#8851#9469#0" expanded="false" />
+            <element signature="e#8899#9400#0" expanded="false" />
+            <element signature="e#9321#9385#0" expanded="false" />
+            <element signature="e#9411#9458#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9830#9878#0" expanded="false" />
+            <element signature="e#9829#9877#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#10089#10147#0" expanded="false" />
-            <element signature="e#10153#10324#0" expanded="false" />
-            <element signature="e#10236#10313#0" expanded="false" />
+            <element signature="e#10088#10146#0" expanded="false" />
+            <element signature="e#10152#10323#0" expanded="false" />
+            <element signature="e#10235#10312#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10533#10591#0" expanded="false" />
-            <element signature="e#10597#10794#0" expanded="false" />
-            <element signature="e#10680#10762#0" expanded="false" />
+            <element signature="e#10532#10590#0" expanded="false" />
+            <element signature="e#10596#10793#0" expanded="false" />
+            <element signature="e#10679#10761#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11304#11361#0" expanded="false" />
-            <element signature="e#11416#11466#0" expanded="false" />
+            <element signature="e#11303#11360#0" expanded="false" />
+            <element signature="e#11415#11465#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#12235#12265#0" expanded="false" />
-            <element signature="e#12529#12929#0" expanded="false" />
-            <element signature="e#12612#12834#0" expanded="false" />
-            <element signature="e#12870#12912#0" expanded="false" />
-            <element signature="e#12990#13032#0" expanded="false" />
+            <element signature="e#12234#12264#0" expanded="false" />
+            <element signature="e#12528#12928#0" expanded="false" />
+            <element signature="e#12611#12833#0" expanded="false" />
+            <element signature="e#12869#12911#0" expanded="false" />
+            <element signature="e#12989#13031#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPairs#0;n#App#0" expanded="false" />
-            <element signature="e#13433#13991#0" expanded="false" />
-            <element signature="e#13460#13510#0" expanded="false" />
-            <element signature="e#13561#13602#0" expanded="false" />
-            <element signature="e#13698#13780#0" expanded="false" />
-            <element signature="e#13786#13868#0" expanded="false" />
+            <element signature="e#13432#13990#0" expanded="false" />
+            <element signature="e#13459#13509#0" expanded="false" />
+            <element signature="e#13560#13601#0" expanded="false" />
+            <element signature="e#13697#13779#0" expanded="false" />
+            <element signature="e#13785#13867#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
-            <element signature="e#14186#14617#0" expanded="false" />
-            <element signature="e#14260#14446#0" expanded="false" />
-            <element signature="e#14490#14573#0" expanded="false" />
-            <element signature="e#14642#14688#0" expanded="false" />
-            <element signature="e#14702#14746#0" expanded="false" />
+            <element signature="e#14185#14616#0" expanded="false" />
+            <element signature="e#14259#14445#0" expanded="false" />
+            <element signature="e#14489#14572#0" expanded="false" />
+            <element signature="e#14641#14687#0" expanded="false" />
+            <element signature="e#14701#14745#0" expanded="false" />
             <element signature="n#!!block;n#shuffle#0;n#App#0" expanded="false" />
-            <element signature="e#14945#15306#0" expanded="false" />
-            <element signature="e#15323#15357#0" expanded="false" />
+            <element signature="e#14944#15305#0" expanded="false" />
+            <element signature="e#15322#15356#0" expanded="false" />
             <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
-            <element signature="e#15488#15855#0" expanded="false" />
-            <element signature="e#15537#15611#0" expanded="false" />
-            <element signature="e#15684#15769#0" expanded="false" />
-            <element signature="e#15775#15845#0" expanded="false" />
-            <element signature="e#15921#16734#0" expanded="false" />
-            <element signature="e#15922#16733#0" expanded="false" />
-            <element signature="e#16037#16369#0" expanded="false" />
-            <element signature="e#16511#16669#0" expanded="false" />
-            <element signature="e#16841#17554#0" expanded="false" />
-            <element signature="e#16842#17553#0" expanded="false" />
-            <element signature="e#16973#17282#0" expanded="false" />
-            <element signature="e#17359#17489#0" expanded="false" />
-            <element signature="e#17651#17881#0" expanded="false" />
-            <element signature="e#17669#17865#0" expanded="false" />
-            <element signature="e#17924#18576#0" expanded="false" />
-            <element signature="e#17978#18165#0" expanded="false" />
-            <element signature="e#18186#18495#0" expanded="false" />
-            <element signature="e#18373#18467#0" expanded="false" />
+            <element signature="e#15487#15854#0" expanded="false" />
+            <element signature="e#15536#15610#0" expanded="false" />
+            <element signature="e#15683#15768#0" expanded="false" />
+            <element signature="e#15774#15844#0" expanded="false" />
+            <element signature="e#15920#16733#0" expanded="false" />
+            <element signature="e#15921#16732#0" expanded="false" />
+            <element signature="e#16036#16368#0" expanded="false" />
+            <element signature="e#16510#16668#0" expanded="false" />
+            <element signature="e#16840#17553#0" expanded="false" />
+            <element signature="e#16841#17552#0" expanded="false" />
+            <element signature="e#16972#17281#0" expanded="false" />
+            <element signature="e#17358#17488#0" expanded="false" />
+            <element signature="e#17650#17880#0" expanded="false" />
+            <element signature="e#17668#17864#0" expanded="false" />
+            <element signature="e#17923#18575#0" expanded="false" />
+            <element signature="e#17977#18164#0" expanded="false" />
+            <element signature="e#18185#18494#0" expanded="false" />
+            <element signature="e#18372#18466#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -829,109 +828,109 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#getAssets#0;n#App#0" expanded="false" />
-            <element signature="e#1608#2010#0" expanded="false" />
-            <element signature="e#1836#1899#0" expanded="false" />
-            <element signature="e#2064#2076#0" expanded="false" />
+            <element signature="e#1607#2009#0" expanded="false" />
+            <element signature="e#1835#1898#0" expanded="false" />
+            <element signature="e#2063#2075#0" expanded="false" />
             <element signature="n#!!block;n#bButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#sameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#differentButton#0;n#App#0" expanded="false" />
-            <element signature="e#2718#2850#0" expanded="false" />
+            <element signature="e#2717#2849#0" expanded="false" />
             <element signature="n#!!block;n#componentDidMount#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#componentWillMount#0;n#App#0" expanded="false" />
-            <element signature="e#3145#3239#0" expanded="false" />
-            <element signature="e#3312#3440#0" expanded="false" />
-            <element signature="e#3446#3458#0" expanded="false" />
+            <element signature="e#3144#3238#0" expanded="false" />
+            <element signature="e#3311#3439#0" expanded="false" />
+            <element signature="e#3445#3457#0" expanded="false" />
             <element signature="n#!!block;n#footer#0;n#App#0" expanded="false" />
-            <element signature="e#3501#3720#0" expanded="false" />
-            <element signature="e#3573#3705#0" expanded="false" />
-            <element signature="e#3789#3874#0" expanded="false" />
-            <element signature="e#4832#5024#0" expanded="false" />
-            <element signature="e#5070#5706#0" expanded="false" />
-            <element signature="e#5143#5511#0" expanded="false" />
+            <element signature="e#3500#3719#0" expanded="false" />
+            <element signature="e#3572#3704#0" expanded="false" />
+            <element signature="e#3788#3873#0" expanded="false" />
+            <element signature="e#4831#5023#0" expanded="false" />
+            <element signature="e#5069#5705#0" expanded="false" />
+            <element signature="e#5142#5510#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoChart#0;n#App#0" expanded="false" />
-            <element signature="e#5904#6097#0" expanded="false" />
-            <element signature="e#6144#6876#0" expanded="false" />
-            <element signature="e#6213#6570#0" expanded="false" />
-            <element signature="e#6692#6725#0" expanded="false" />
-            <element signature="e#6744#6784#0" expanded="false" />
-            <element signature="e#6799#6807#0" expanded="false" />
+            <element signature="e#5903#6096#0" expanded="false" />
+            <element signature="e#6143#6875#0" expanded="false" />
+            <element signature="e#6212#6569#0" expanded="false" />
+            <element signature="e#6691#6724#0" expanded="false" />
+            <element signature="e#6743#6783#0" expanded="false" />
+            <element signature="e#6798#6806#0" expanded="false" />
             <element signature="n#!!block;n#experimentOneSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7152#7270#0" expanded="false" />
-            <element signature="e#7206#7260#0" expanded="false" />
-            <element signature="e#7313#7455#0" expanded="false" />
-            <element signature="e#7388#7444#0" expanded="false" />
+            <element signature="e#7151#7269#0" expanded="false" />
+            <element signature="e#7205#7259#0" expanded="false" />
+            <element signature="e#7312#7454#0" expanded="false" />
+            <element signature="e#7387#7443#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7528#7715#0" expanded="false" />
-            <element signature="e#7967#8083#0" expanded="false" />
-            <element signature="e#8020#8073#0" expanded="false" />
-            <element signature="e#8191#8238#0" expanded="false" />
+            <element signature="e#7527#7714#0" expanded="false" />
+            <element signature="e#7966#8082#0" expanded="false" />
+            <element signature="e#8019#8072#0" expanded="false" />
+            <element signature="e#8190#8237#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8852#9470#0" expanded="false" />
-            <element signature="e#8900#9401#0" expanded="false" />
-            <element signature="e#9322#9386#0" expanded="false" />
-            <element signature="e#9412#9459#0" expanded="false" />
+            <element signature="e#8851#9469#0" expanded="false" />
+            <element signature="e#8899#9400#0" expanded="false" />
+            <element signature="e#9321#9385#0" expanded="false" />
+            <element signature="e#9411#9458#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9830#9878#0" expanded="false" />
+            <element signature="e#9829#9877#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#10089#10147#0" expanded="false" />
-            <element signature="e#10153#10324#0" expanded="false" />
-            <element signature="e#10236#10313#0" expanded="false" />
+            <element signature="e#10088#10146#0" expanded="false" />
+            <element signature="e#10152#10323#0" expanded="false" />
+            <element signature="e#10235#10312#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10533#10591#0" expanded="false" />
-            <element signature="e#10597#10794#0" expanded="false" />
-            <element signature="e#10680#10762#0" expanded="false" />
+            <element signature="e#10532#10590#0" expanded="false" />
+            <element signature="e#10596#10793#0" expanded="false" />
+            <element signature="e#10679#10761#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11304#11361#0" expanded="false" />
-            <element signature="e#11416#11466#0" expanded="false" />
+            <element signature="e#11303#11360#0" expanded="false" />
+            <element signature="e#11415#11465#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#12235#12265#0" expanded="false" />
-            <element signature="e#12529#12929#0" expanded="false" />
-            <element signature="e#12612#12834#0" expanded="false" />
-            <element signature="e#12870#12912#0" expanded="false" />
-            <element signature="e#12990#13032#0" expanded="false" />
+            <element signature="e#12234#12264#0" expanded="false" />
+            <element signature="e#12528#12928#0" expanded="false" />
+            <element signature="e#12611#12833#0" expanded="false" />
+            <element signature="e#12869#12911#0" expanded="false" />
+            <element signature="e#12989#13031#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPairs#0;n#App#0" expanded="false" />
-            <element signature="e#13433#13991#0" expanded="false" />
-            <element signature="e#13460#13510#0" expanded="false" />
-            <element signature="e#13561#13602#0" expanded="false" />
-            <element signature="e#13698#13780#0" expanded="false" />
-            <element signature="e#13786#13868#0" expanded="false" />
+            <element signature="e#13432#13990#0" expanded="false" />
+            <element signature="e#13459#13509#0" expanded="false" />
+            <element signature="e#13560#13601#0" expanded="false" />
+            <element signature="e#13697#13779#0" expanded="false" />
+            <element signature="e#13785#13867#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
-            <element signature="e#14186#14617#0" expanded="false" />
-            <element signature="e#14260#14446#0" expanded="false" />
-            <element signature="e#14490#14573#0" expanded="false" />
-            <element signature="e#14642#14688#0" expanded="false" />
-            <element signature="e#14702#14746#0" expanded="false" />
+            <element signature="e#14185#14616#0" expanded="false" />
+            <element signature="e#14259#14445#0" expanded="false" />
+            <element signature="e#14489#14572#0" expanded="false" />
+            <element signature="e#14641#14687#0" expanded="false" />
+            <element signature="e#14701#14745#0" expanded="false" />
             <element signature="n#!!block;n#shuffle#0;n#App#0" expanded="false" />
-            <element signature="e#14945#15306#0" expanded="false" />
-            <element signature="e#15323#15357#0" expanded="false" />
+            <element signature="e#14944#15305#0" expanded="false" />
+            <element signature="e#15322#15356#0" expanded="false" />
             <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
-            <element signature="e#15488#15855#0" expanded="false" />
-            <element signature="e#15537#15611#0" expanded="false" />
-            <element signature="e#15684#15769#0" expanded="false" />
-            <element signature="e#15775#15845#0" expanded="false" />
-            <element signature="e#15921#16734#0" expanded="false" />
-            <element signature="e#15922#16733#0" expanded="false" />
-            <element signature="e#16037#16369#0" expanded="false" />
-            <element signature="e#16511#16669#0" expanded="false" />
-            <element signature="e#16841#17554#0" expanded="false" />
-            <element signature="e#16842#17553#0" expanded="false" />
-            <element signature="e#16973#17282#0" expanded="false" />
-            <element signature="e#17359#17489#0" expanded="false" />
-            <element signature="e#17651#17881#0" expanded="false" />
-            <element signature="e#17669#17865#0" expanded="false" />
-            <element signature="e#17924#18576#0" expanded="false" />
-            <element signature="e#17978#18165#0" expanded="false" />
-            <element signature="e#18186#18495#0" expanded="false" />
-            <element signature="e#18373#18467#0" expanded="false" />
+            <element signature="e#15487#15854#0" expanded="false" />
+            <element signature="e#15536#15610#0" expanded="false" />
+            <element signature="e#15683#15768#0" expanded="false" />
+            <element signature="e#15774#15844#0" expanded="false" />
+            <element signature="e#15920#16733#0" expanded="false" />
+            <element signature="e#15921#16732#0" expanded="false" />
+            <element signature="e#16036#16368#0" expanded="false" />
+            <element signature="e#16510#16668#0" expanded="false" />
+            <element signature="e#16840#17553#0" expanded="false" />
+            <element signature="e#16841#17552#0" expanded="false" />
+            <element signature="e#16972#17281#0" expanded="false" />
+            <element signature="e#17358#17488#0" expanded="false" />
+            <element signature="e#17650#17880#0" expanded="false" />
+            <element signature="e#17668#17864#0" expanded="false" />
+            <element signature="e#17923#18575#0" expanded="false" />
+            <element signature="e#17977#18164#0" expanded="false" />
+            <element signature="e#18185#18494#0" expanded="false" />
+            <element signature="e#18372#18466#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1032,109 +1031,109 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#getAssets#0;n#App#0" expanded="false" />
-            <element signature="e#1608#2010#0" expanded="false" />
-            <element signature="e#1836#1899#0" expanded="false" />
-            <element signature="e#2064#2076#0" expanded="false" />
+            <element signature="e#1607#2009#0" expanded="false" />
+            <element signature="e#1835#1898#0" expanded="false" />
+            <element signature="e#2063#2075#0" expanded="false" />
             <element signature="n#!!block;n#bButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#sameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#differentButton#0;n#App#0" expanded="false" />
-            <element signature="e#2718#2850#0" expanded="false" />
+            <element signature="e#2717#2849#0" expanded="false" />
             <element signature="n#!!block;n#componentDidMount#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#componentWillMount#0;n#App#0" expanded="false" />
-            <element signature="e#3145#3239#0" expanded="false" />
-            <element signature="e#3312#3440#0" expanded="false" />
-            <element signature="e#3446#3458#0" expanded="false" />
+            <element signature="e#3144#3238#0" expanded="false" />
+            <element signature="e#3311#3439#0" expanded="false" />
+            <element signature="e#3445#3457#0" expanded="false" />
             <element signature="n#!!block;n#footer#0;n#App#0" expanded="false" />
-            <element signature="e#3501#3720#0" expanded="false" />
-            <element signature="e#3573#3705#0" expanded="false" />
-            <element signature="e#3789#3874#0" expanded="false" />
-            <element signature="e#4832#5024#0" expanded="false" />
-            <element signature="e#5070#5706#0" expanded="false" />
-            <element signature="e#5143#5511#0" expanded="false" />
+            <element signature="e#3500#3719#0" expanded="false" />
+            <element signature="e#3572#3704#0" expanded="false" />
+            <element signature="e#3788#3873#0" expanded="false" />
+            <element signature="e#4831#5023#0" expanded="false" />
+            <element signature="e#5069#5705#0" expanded="false" />
+            <element signature="e#5142#5510#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoChart#0;n#App#0" expanded="false" />
-            <element signature="e#5904#6097#0" expanded="false" />
-            <element signature="e#6144#6876#0" expanded="false" />
-            <element signature="e#6213#6570#0" expanded="false" />
-            <element signature="e#6692#6725#0" expanded="false" />
-            <element signature="e#6744#6784#0" expanded="false" />
-            <element signature="e#6799#6807#0" expanded="false" />
+            <element signature="e#5903#6096#0" expanded="false" />
+            <element signature="e#6143#6875#0" expanded="false" />
+            <element signature="e#6212#6569#0" expanded="false" />
+            <element signature="e#6691#6724#0" expanded="false" />
+            <element signature="e#6743#6783#0" expanded="false" />
+            <element signature="e#6798#6806#0" expanded="false" />
             <element signature="n#!!block;n#experimentOneSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7152#7270#0" expanded="false" />
-            <element signature="e#7206#7260#0" expanded="false" />
-            <element signature="e#7313#7455#0" expanded="false" />
-            <element signature="e#7388#7444#0" expanded="false" />
+            <element signature="e#7151#7269#0" expanded="false" />
+            <element signature="e#7205#7259#0" expanded="false" />
+            <element signature="e#7312#7454#0" expanded="false" />
+            <element signature="e#7387#7443#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7528#7715#0" expanded="false" />
-            <element signature="e#7967#8083#0" expanded="false" />
-            <element signature="e#8020#8073#0" expanded="false" />
-            <element signature="e#8191#8238#0" expanded="false" />
+            <element signature="e#7527#7714#0" expanded="false" />
+            <element signature="e#7966#8082#0" expanded="false" />
+            <element signature="e#8019#8072#0" expanded="false" />
+            <element signature="e#8190#8237#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8852#9470#0" expanded="false" />
-            <element signature="e#8900#9401#0" expanded="false" />
-            <element signature="e#9322#9386#0" expanded="false" />
-            <element signature="e#9412#9459#0" expanded="false" />
+            <element signature="e#8851#9469#0" expanded="false" />
+            <element signature="e#8899#9400#0" expanded="false" />
+            <element signature="e#9321#9385#0" expanded="false" />
+            <element signature="e#9411#9458#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9830#9878#0" expanded="false" />
+            <element signature="e#9829#9877#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#10089#10147#0" expanded="false" />
-            <element signature="e#10153#10324#0" expanded="false" />
-            <element signature="e#10236#10313#0" expanded="false" />
+            <element signature="e#10088#10146#0" expanded="false" />
+            <element signature="e#10152#10323#0" expanded="false" />
+            <element signature="e#10235#10312#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10533#10591#0" expanded="false" />
-            <element signature="e#10597#10794#0" expanded="false" />
-            <element signature="e#10680#10762#0" expanded="false" />
+            <element signature="e#10532#10590#0" expanded="false" />
+            <element signature="e#10596#10793#0" expanded="false" />
+            <element signature="e#10679#10761#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11304#11361#0" expanded="false" />
-            <element signature="e#11416#11466#0" expanded="false" />
+            <element signature="e#11303#11360#0" expanded="false" />
+            <element signature="e#11415#11465#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#12235#12265#0" expanded="false" />
-            <element signature="e#12529#12929#0" expanded="false" />
-            <element signature="e#12612#12834#0" expanded="false" />
-            <element signature="e#12870#12912#0" expanded="false" />
-            <element signature="e#12990#13032#0" expanded="false" />
+            <element signature="e#12234#12264#0" expanded="false" />
+            <element signature="e#12528#12928#0" expanded="false" />
+            <element signature="e#12611#12833#0" expanded="false" />
+            <element signature="e#12869#12911#0" expanded="false" />
+            <element signature="e#12989#13031#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPairs#0;n#App#0" expanded="false" />
-            <element signature="e#13433#13991#0" expanded="false" />
-            <element signature="e#13460#13510#0" expanded="false" />
-            <element signature="e#13561#13602#0" expanded="false" />
-            <element signature="e#13698#13780#0" expanded="false" />
-            <element signature="e#13786#13868#0" expanded="false" />
+            <element signature="e#13432#13990#0" expanded="false" />
+            <element signature="e#13459#13509#0" expanded="false" />
+            <element signature="e#13560#13601#0" expanded="false" />
+            <element signature="e#13697#13779#0" expanded="false" />
+            <element signature="e#13785#13867#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
-            <element signature="e#14186#14617#0" expanded="false" />
-            <element signature="e#14260#14446#0" expanded="false" />
-            <element signature="e#14490#14573#0" expanded="false" />
-            <element signature="e#14642#14688#0" expanded="false" />
-            <element signature="e#14702#14746#0" expanded="false" />
+            <element signature="e#14185#14616#0" expanded="false" />
+            <element signature="e#14259#14445#0" expanded="false" />
+            <element signature="e#14489#14572#0" expanded="false" />
+            <element signature="e#14641#14687#0" expanded="false" />
+            <element signature="e#14701#14745#0" expanded="false" />
             <element signature="n#!!block;n#shuffle#0;n#App#0" expanded="false" />
-            <element signature="e#14945#15306#0" expanded="false" />
-            <element signature="e#15323#15357#0" expanded="false" />
+            <element signature="e#14944#15305#0" expanded="false" />
+            <element signature="e#15322#15356#0" expanded="false" />
             <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
-            <element signature="e#15488#15855#0" expanded="false" />
-            <element signature="e#15537#15611#0" expanded="false" />
-            <element signature="e#15684#15769#0" expanded="false" />
-            <element signature="e#15775#15845#0" expanded="false" />
-            <element signature="e#15921#16734#0" expanded="false" />
-            <element signature="e#15922#16733#0" expanded="false" />
-            <element signature="e#16037#16369#0" expanded="false" />
-            <element signature="e#16511#16669#0" expanded="false" />
-            <element signature="e#16841#17554#0" expanded="false" />
-            <element signature="e#16842#17553#0" expanded="false" />
-            <element signature="e#16973#17282#0" expanded="false" />
-            <element signature="e#17359#17489#0" expanded="false" />
-            <element signature="e#17651#17881#0" expanded="false" />
-            <element signature="e#17669#17865#0" expanded="false" />
-            <element signature="e#17924#18576#0" expanded="false" />
-            <element signature="e#17978#18165#0" expanded="false" />
-            <element signature="e#18186#18495#0" expanded="false" />
-            <element signature="e#18373#18467#0" expanded="false" />
+            <element signature="e#15487#15854#0" expanded="false" />
+            <element signature="e#15536#15610#0" expanded="false" />
+            <element signature="e#15683#15768#0" expanded="false" />
+            <element signature="e#15774#15844#0" expanded="false" />
+            <element signature="e#15920#16733#0" expanded="false" />
+            <element signature="e#15921#16732#0" expanded="false" />
+            <element signature="e#16036#16368#0" expanded="false" />
+            <element signature="e#16510#16668#0" expanded="false" />
+            <element signature="e#16840#17553#0" expanded="false" />
+            <element signature="e#16841#17552#0" expanded="false" />
+            <element signature="e#16972#17281#0" expanded="false" />
+            <element signature="e#17358#17488#0" expanded="false" />
+            <element signature="e#17650#17880#0" expanded="false" />
+            <element signature="e#17668#17864#0" expanded="false" />
+            <element signature="e#17923#18575#0" expanded="false" />
+            <element signature="e#17977#18164#0" expanded="false" />
+            <element signature="e#18185#18494#0" expanded="false" />
+            <element signature="e#18372#18466#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1235,109 +1234,109 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!block;n#getAssets#0;n#App#0" expanded="false" />
-            <element signature="e#1608#2010#0" expanded="false" />
-            <element signature="e#1836#1899#0" expanded="false" />
-            <element signature="e#2064#2076#0" expanded="false" />
+            <element signature="e#1607#2009#0" expanded="false" />
+            <element signature="e#1835#1898#0" expanded="false" />
+            <element signature="e#2063#2075#0" expanded="false" />
             <element signature="n#!!block;n#bButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#sameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#differentButton#0;n#App#0" expanded="false" />
-            <element signature="e#2718#2850#0" expanded="false" />
+            <element signature="e#2717#2849#0" expanded="false" />
             <element signature="n#!!block;n#componentDidMount#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#componentWillMount#0;n#App#0" expanded="false" />
-            <element signature="e#3145#3239#0" expanded="false" />
-            <element signature="e#3312#3440#0" expanded="false" />
-            <element signature="e#3446#3458#0" expanded="false" />
+            <element signature="e#3144#3238#0" expanded="false" />
+            <element signature="e#3311#3439#0" expanded="false" />
+            <element signature="e#3445#3457#0" expanded="false" />
             <element signature="n#!!block;n#footer#0;n#App#0" expanded="false" />
-            <element signature="e#3501#3720#0" expanded="false" />
-            <element signature="e#3573#3705#0" expanded="false" />
-            <element signature="e#3789#3874#0" expanded="false" />
-            <element signature="e#4832#5024#0" expanded="false" />
-            <element signature="e#5070#5706#0" expanded="false" />
-            <element signature="e#5143#5511#0" expanded="false" />
+            <element signature="e#3500#3719#0" expanded="false" />
+            <element signature="e#3572#3704#0" expanded="false" />
+            <element signature="e#3788#3873#0" expanded="false" />
+            <element signature="e#4831#5023#0" expanded="false" />
+            <element signature="e#5069#5705#0" expanded="false" />
+            <element signature="e#5142#5510#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoChart#0;n#App#0" expanded="false" />
-            <element signature="e#5904#6097#0" expanded="false" />
-            <element signature="e#6144#6876#0" expanded="false" />
-            <element signature="e#6213#6570#0" expanded="false" />
-            <element signature="e#6692#6725#0" expanded="false" />
-            <element signature="e#6744#6784#0" expanded="false" />
-            <element signature="e#6799#6807#0" expanded="false" />
+            <element signature="e#5903#6096#0" expanded="false" />
+            <element signature="e#6143#6875#0" expanded="false" />
+            <element signature="e#6212#6569#0" expanded="false" />
+            <element signature="e#6691#6724#0" expanded="false" />
+            <element signature="e#6743#6783#0" expanded="false" />
+            <element signature="e#6798#6806#0" expanded="false" />
             <element signature="n#!!block;n#experimentOneSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7152#7270#0" expanded="false" />
-            <element signature="e#7206#7260#0" expanded="false" />
-            <element signature="e#7313#7455#0" expanded="false" />
-            <element signature="e#7388#7444#0" expanded="false" />
+            <element signature="e#7151#7269#0" expanded="false" />
+            <element signature="e#7205#7259#0" expanded="false" />
+            <element signature="e#7312#7454#0" expanded="false" />
+            <element signature="e#7387#7443#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7528#7715#0" expanded="false" />
-            <element signature="e#7967#8083#0" expanded="false" />
-            <element signature="e#8020#8073#0" expanded="false" />
-            <element signature="e#8191#8238#0" expanded="false" />
+            <element signature="e#7527#7714#0" expanded="false" />
+            <element signature="e#7966#8082#0" expanded="false" />
+            <element signature="e#8019#8072#0" expanded="false" />
+            <element signature="e#8190#8237#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8852#9470#0" expanded="false" />
-            <element signature="e#8900#9401#0" expanded="false" />
-            <element signature="e#9322#9386#0" expanded="false" />
-            <element signature="e#9412#9459#0" expanded="false" />
+            <element signature="e#8851#9469#0" expanded="false" />
+            <element signature="e#8899#9400#0" expanded="false" />
+            <element signature="e#9321#9385#0" expanded="false" />
+            <element signature="e#9411#9458#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9830#9878#0" expanded="false" />
+            <element signature="e#9829#9877#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#10089#10147#0" expanded="false" />
-            <element signature="e#10153#10324#0" expanded="false" />
-            <element signature="e#10236#10313#0" expanded="false" />
+            <element signature="e#10088#10146#0" expanded="false" />
+            <element signature="e#10152#10323#0" expanded="false" />
+            <element signature="e#10235#10312#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10533#10591#0" expanded="false" />
-            <element signature="e#10597#10794#0" expanded="false" />
-            <element signature="e#10680#10762#0" expanded="false" />
+            <element signature="e#10532#10590#0" expanded="false" />
+            <element signature="e#10596#10793#0" expanded="false" />
+            <element signature="e#10679#10761#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11304#11361#0" expanded="false" />
-            <element signature="e#11416#11466#0" expanded="false" />
+            <element signature="e#11303#11360#0" expanded="false" />
+            <element signature="e#11415#11465#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#12235#12265#0" expanded="false" />
-            <element signature="e#12529#12929#0" expanded="false" />
-            <element signature="e#12612#12834#0" expanded="false" />
-            <element signature="e#12870#12912#0" expanded="false" />
-            <element signature="e#12990#13032#0" expanded="false" />
+            <element signature="e#12234#12264#0" expanded="false" />
+            <element signature="e#12528#12928#0" expanded="false" />
+            <element signature="e#12611#12833#0" expanded="false" />
+            <element signature="e#12869#12911#0" expanded="false" />
+            <element signature="e#12989#13031#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPairs#0;n#App#0" expanded="false" />
-            <element signature="e#13433#13991#0" expanded="false" />
-            <element signature="e#13460#13510#0" expanded="false" />
-            <element signature="e#13561#13602#0" expanded="false" />
-            <element signature="e#13698#13780#0" expanded="false" />
-            <element signature="e#13786#13868#0" expanded="false" />
+            <element signature="e#13432#13990#0" expanded="false" />
+            <element signature="e#13459#13509#0" expanded="false" />
+            <element signature="e#13560#13601#0" expanded="false" />
+            <element signature="e#13697#13779#0" expanded="false" />
+            <element signature="e#13785#13867#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
-            <element signature="e#14186#14617#0" expanded="false" />
-            <element signature="e#14260#14446#0" expanded="false" />
-            <element signature="e#14490#14573#0" expanded="false" />
-            <element signature="e#14642#14688#0" expanded="false" />
-            <element signature="e#14702#14746#0" expanded="false" />
+            <element signature="e#14185#14616#0" expanded="false" />
+            <element signature="e#14259#14445#0" expanded="false" />
+            <element signature="e#14489#14572#0" expanded="false" />
+            <element signature="e#14641#14687#0" expanded="false" />
+            <element signature="e#14701#14745#0" expanded="false" />
             <element signature="n#!!block;n#shuffle#0;n#App#0" expanded="false" />
-            <element signature="e#14945#15306#0" expanded="false" />
-            <element signature="e#15323#15357#0" expanded="false" />
+            <element signature="e#14944#15305#0" expanded="false" />
+            <element signature="e#15322#15356#0" expanded="false" />
             <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
-            <element signature="e#15488#15855#0" expanded="false" />
-            <element signature="e#15537#15611#0" expanded="false" />
-            <element signature="e#15684#15769#0" expanded="false" />
-            <element signature="e#15775#15845#0" expanded="false" />
-            <element signature="e#15921#16734#0" expanded="false" />
-            <element signature="e#15922#16733#0" expanded="false" />
-            <element signature="e#16037#16369#0" expanded="false" />
-            <element signature="e#16511#16669#0" expanded="false" />
-            <element signature="e#16841#17554#0" expanded="false" />
-            <element signature="e#16842#17553#0" expanded="false" />
-            <element signature="e#16973#17282#0" expanded="false" />
-            <element signature="e#17359#17489#0" expanded="false" />
-            <element signature="e#17651#17881#0" expanded="false" />
-            <element signature="e#17669#17865#0" expanded="false" />
-            <element signature="e#17924#18576#0" expanded="false" />
-            <element signature="e#17978#18165#0" expanded="false" />
-            <element signature="e#18186#18495#0" expanded="false" />
-            <element signature="e#18373#18467#0" expanded="false" />
+            <element signature="e#15487#15854#0" expanded="false" />
+            <element signature="e#15536#15610#0" expanded="false" />
+            <element signature="e#15683#15768#0" expanded="false" />
+            <element signature="e#15774#15844#0" expanded="false" />
+            <element signature="e#15920#16733#0" expanded="false" />
+            <element signature="e#15921#16732#0" expanded="false" />
+            <element signature="e#16036#16368#0" expanded="false" />
+            <element signature="e#16510#16668#0" expanded="false" />
+            <element signature="e#16840#17553#0" expanded="false" />
+            <element signature="e#16841#17552#0" expanded="false" />
+            <element signature="e#16972#17281#0" expanded="false" />
+            <element signature="e#17358#17488#0" expanded="false" />
+            <element signature="e#17650#17880#0" expanded="false" />
+            <element signature="e#17668#17864#0" expanded="false" />
+            <element signature="e#17923#18575#0" expanded="false" />
+            <element signature="e#17977#18164#0" expanded="false" />
+            <element signature="e#18185#18494#0" expanded="false" />
+            <element signature="e#18372#18466#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1471,113 +1470,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="168" column="33" lean-forward="false" selection-start-line="168" selection-start-column="33" selection-end-line="168" selection-end-column="33" />
+        <state relative-caret-position="391">
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
           <folding>
             <element signature="n#!!block;n#getAssets#0;n#App#0" expanded="false" />
-            <element signature="e#1608#2010#0" expanded="false" />
-            <element signature="e#1836#1899#0" expanded="false" />
-            <element signature="e#2064#2076#0" expanded="false" />
+            <element signature="e#1607#2009#0" expanded="false" />
+            <element signature="e#1835#1898#0" expanded="false" />
+            <element signature="e#2063#2075#0" expanded="false" />
             <element signature="n#!!block;n#bButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#sameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#differentButton#0;n#App#0" expanded="false" />
-            <element signature="e#2718#2850#0" expanded="false" />
+            <element signature="e#2717#2849#0" expanded="false" />
             <element signature="n#!!block;n#componentDidMount#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#componentWillMount#0;n#App#0" expanded="false" />
-            <element signature="e#3145#3239#0" expanded="false" />
-            <element signature="e#3312#3440#0" expanded="false" />
-            <element signature="e#3446#3458#0" expanded="false" />
+            <element signature="e#3144#3238#0" expanded="false" />
+            <element signature="e#3311#3439#0" expanded="false" />
+            <element signature="e#3445#3457#0" expanded="false" />
             <element signature="n#!!block;n#footer#0;n#App#0" expanded="false" />
-            <element signature="e#3501#3720#0" expanded="false" />
-            <element signature="e#3573#3705#0" expanded="false" />
-            <element signature="e#3789#3874#0" expanded="false" />
-            <element signature="e#4832#5024#0" expanded="false" />
-            <element signature="e#5070#5706#0" expanded="false" />
-            <element signature="e#5143#5511#0" expanded="false" />
+            <element signature="e#3500#3719#0" expanded="false" />
+            <element signature="e#3572#3704#0" expanded="false" />
+            <element signature="e#3788#3873#0" expanded="false" />
+            <element signature="e#4831#5023#0" expanded="false" />
+            <element signature="e#5069#5705#0" expanded="false" />
+            <element signature="e#5142#5510#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoChart#0;n#App#0" expanded="false" />
-            <element signature="e#5904#6097#0" expanded="false" />
-            <element signature="e#6144#6876#0" expanded="false" />
-            <element signature="e#6213#6570#0" expanded="false" />
-            <element signature="e#6692#6725#0" expanded="false" />
-            <element signature="e#6744#6784#0" expanded="false" />
-            <element signature="e#6799#6807#0" expanded="false" />
+            <element signature="e#5903#6096#0" expanded="false" />
+            <element signature="e#6143#6875#0" expanded="false" />
+            <element signature="e#6212#6569#0" expanded="false" />
+            <element signature="e#6691#6724#0" expanded="false" />
+            <element signature="e#6743#6783#0" expanded="false" />
+            <element signature="e#6798#6806#0" expanded="false" />
             <element signature="n#!!block;n#experimentOneSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7152#7270#0" expanded="false" />
-            <element signature="e#7206#7260#0" expanded="false" />
-            <element signature="e#7313#7455#0" expanded="false" />
-            <element signature="e#7388#7444#0" expanded="false" />
+            <element signature="e#7151#7269#0" expanded="false" />
+            <element signature="e#7205#7259#0" expanded="false" />
+            <element signature="e#7312#7454#0" expanded="false" />
+            <element signature="e#7387#7443#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoSetup#0;n#App#0" expanded="false" />
-            <element signature="e#7528#7715#0" expanded="false" />
-            <element signature="e#7967#8083#0" expanded="false" />
-            <element signature="e#8020#8073#0" expanded="false" />
-            <element signature="e#8191#8238#0" expanded="false" />
+            <element signature="e#7527#7714#0" expanded="false" />
+            <element signature="e#7966#8082#0" expanded="false" />
+            <element signature="e#8019#8072#0" expanded="false" />
+            <element signature="e#8190#8237#0" expanded="false" />
             <element signature="n#!!block;n#pressBButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressPButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressSameButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#pressDifferentButton#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#8852#9470#0" expanded="false" />
-            <element signature="e#8900#9401#0" expanded="false" />
-            <element signature="e#9322#9386#0" expanded="false" />
-            <element signature="e#9412#9459#0" expanded="false" />
+            <element signature="e#8851#9469#0" expanded="false" />
+            <element signature="e#8899#9400#0" expanded="false" />
+            <element signature="e#9321#9385#0" expanded="false" />
+            <element signature="e#9411#9458#0" expanded="false" />
             <element signature="n#!!block;n#advanceExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#9830#9878#0" expanded="false" />
+            <element signature="e#9829#9877#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentTwo#0;n#App#0" expanded="false" />
-            <element signature="e#10089#10147#0" expanded="false" />
-            <element signature="e#10153#10324#0" expanded="false" />
-            <element signature="e#10236#10313#0" expanded="false" />
+            <element signature="e#10088#10146#0" expanded="false" />
+            <element signature="e#10152#10323#0" expanded="false" />
+            <element signature="e#10235#10312#0" expanded="false" />
             <element signature="n#!!block;n#runExperimentOne#0;n#App#0" expanded="false" />
-            <element signature="e#10533#10591#0" expanded="false" />
-            <element signature="e#10597#10794#0" expanded="false" />
-            <element signature="e#10680#10762#0" expanded="false" />
+            <element signature="e#10532#10590#0" expanded="false" />
+            <element signature="e#10596#10793#0" expanded="false" />
+            <element signature="e#10679#10761#0" expanded="false" />
             <element signature="n#!!doc;n#experimentOnePlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentOnePlay#0;n#App#0" expanded="false" />
-            <element signature="e#11304#11361#0" expanded="false" />
-            <element signature="e#11416#11466#0" expanded="false" />
+            <element signature="e#11303#11360#0" expanded="false" />
+            <element signature="e#11415#11465#0" expanded="false" />
             <element signature="n#!!doc;n#experimentTwoPlay#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#experimentTwoPlay#0;n#App#0" expanded="false" />
-            <element signature="e#12235#12265#0" expanded="false" />
-            <element signature="e#12529#12929#0" expanded="false" />
-            <element signature="e#12612#12834#0" expanded="false" />
-            <element signature="e#12870#12912#0" expanded="false" />
-            <element signature="e#12990#13032#0" expanded="false" />
+            <element signature="e#12234#12264#0" expanded="false" />
+            <element signature="e#12528#12928#0" expanded="false" />
+            <element signature="e#12611#12833#0" expanded="false" />
+            <element signature="e#12869#12911#0" expanded="false" />
+            <element signature="e#12989#13031#0" expanded="false" />
             <element signature="n#!!doc;n#createPairs#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPairs#0;n#App#0" expanded="false" />
-            <element signature="e#13433#13991#0" expanded="false" />
-            <element signature="e#13460#13510#0" expanded="false" />
-            <element signature="e#13561#13602#0" expanded="false" />
-            <element signature="e#13698#13780#0" expanded="false" />
-            <element signature="e#13786#13868#0" expanded="false" />
+            <element signature="e#13432#13990#0" expanded="false" />
+            <element signature="e#13459#13509#0" expanded="false" />
+            <element signature="e#13560#13601#0" expanded="false" />
+            <element signature="e#13697#13779#0" expanded="false" />
+            <element signature="e#13785#13867#0" expanded="false" />
             <element signature="n#!!block;n#charts#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#createPermutations#0;n#App#0" expanded="false" />
-            <element signature="e#14186#14617#0" expanded="false" />
-            <element signature="e#14260#14446#0" expanded="false" />
-            <element signature="e#14490#14573#0" expanded="false" />
-            <element signature="e#14642#14688#0" expanded="false" />
-            <element signature="e#14702#14746#0" expanded="false" />
+            <element signature="e#14185#14616#0" expanded="false" />
+            <element signature="e#14259#14445#0" expanded="false" />
+            <element signature="e#14489#14572#0" expanded="false" />
+            <element signature="e#14641#14687#0" expanded="false" />
+            <element signature="e#14701#14745#0" expanded="false" />
             <element signature="n#!!block;n#shuffle#0;n#App#0" expanded="false" />
-            <element signature="e#14945#15306#0" expanded="false" />
-            <element signature="e#15323#15357#0" expanded="false" />
+            <element signature="e#14944#15305#0" expanded="false" />
+            <element signature="e#15322#15356#0" expanded="false" />
             <element signature="n#!!block;n#render#0;n#App#0" expanded="false" />
-            <element signature="e#15488#15855#0" expanded="false" />
-            <element signature="e#15537#15611#0" expanded="false" />
-            <element signature="e#15684#15769#0" expanded="false" />
-            <element signature="e#15775#15845#0" expanded="false" />
-            <element signature="e#15921#16734#0" expanded="false" />
-            <element signature="e#15922#16733#0" expanded="false" />
-            <element signature="e#16037#16369#0" expanded="false" />
-            <element signature="e#16511#16669#0" expanded="false" />
-            <element signature="e#16841#17554#0" expanded="false" />
-            <element signature="e#16842#17553#0" expanded="false" />
-            <element signature="e#16973#17282#0" expanded="false" />
-            <element signature="e#17359#17489#0" expanded="false" />
-            <element signature="e#17651#17881#0" expanded="false" />
-            <element signature="e#17669#17865#0" expanded="false" />
-            <element signature="e#17924#18576#0" expanded="false" />
-            <element signature="e#17978#18165#0" expanded="false" />
-            <element signature="e#18186#18495#0" expanded="false" />
-            <element signature="e#18373#18467#0" expanded="false" />
+            <element signature="e#15487#15854#0" expanded="false" />
+            <element signature="e#15536#15610#0" expanded="false" />
+            <element signature="e#15683#15768#0" expanded="false" />
+            <element signature="e#15774#15844#0" expanded="false" />
+            <element signature="e#15920#16733#0" expanded="false" />
+            <element signature="e#15921#16732#0" expanded="false" />
+            <element signature="e#16036#16368#0" expanded="false" />
+            <element signature="e#16510#16668#0" expanded="false" />
+            <element signature="e#16840#17553#0" expanded="false" />
+            <element signature="e#16841#17552#0" expanded="false" />
+            <element signature="e#16972#17281#0" expanded="false" />
+            <element signature="e#17358#17488#0" expanded="false" />
+            <element signature="e#17650#17880#0" expanded="false" />
+            <element signature="e#17668#17864#0" expanded="false" />
+            <element signature="e#17923#18575#0" expanded="false" />
+            <element signature="e#17977#18164#0" expanded="false" />
+            <element signature="e#18185#18494#0" expanded="false" />
+            <element signature="e#18372#18466#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1585,7 +1584,7 @@
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="67" lean-forward="false" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+          <caret line="6" column="115" lean-forward="false" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="115" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

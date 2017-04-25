@@ -29489,7 +29489,7 @@ var App = function (_Component) {
             sounds: [],
             running: false,
             experimentOneDone: false, //reset to false
-            experimentTwoDone: false,
+            experimentTwoDone: true,
             experimentTwoArray: []
 
         };
@@ -29626,18 +29626,20 @@ var App = function (_Component) {
              */
 
             var d = this.state.sounds.map(function (obj) {
+                console.log(obj);
                 var id = obj.id;
                 var ret = {};
                 return ret[id] = 0;
             });
 
             this.state.experimentOneResults.map(function (obj) {
-
+                console.log(obj);
                 var ret = {};
                 if (obj.answer === "/b/") {
 
                     for (var i in d) {
                         if (d[i].hasOwnProperty(obj.sound1.id)) {
+                            console.log("Incrementing");
                             d[i][obj.sound1.id] += 1;
                         }
                     }
@@ -29646,7 +29648,7 @@ var App = function (_Component) {
                     vot = vot.replace("/", "");
                     vot = vot.replace("pi", "");
                     // ret.vot = Number(vot) * 100;
-
+                    console.log(vot);
 
                     d[Number(vot) - 1]++;
                     return vot;
@@ -30174,7 +30176,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '2', fileSuffix: '.wav', experimentTwoRepetitions: '2', logo: './logo.svg' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '10', fileSuffix: '.wav', experimentTwoRepetitions: '5', logo: './logo.svg' }), document.getElementById('root'));
 
 /***/ }),
 /* 293 */

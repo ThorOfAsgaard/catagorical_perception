@@ -23,7 +23,7 @@ class App extends Component {
             sounds: [],
             running: false,
             experimentOneDone: false, //reset to false
-            experimentTwoDone: false,
+            experimentTwoDone: true,
             experimentTwoArray: [],
 
         };
@@ -142,6 +142,7 @@ class App extends Component {
          */
 
         let d = this.state.sounds.map(function (obj) {
+            console.log(obj);
             let id = obj.id;
             let ret = {}
             return ret[id] = 0;
@@ -150,12 +151,13 @@ class App extends Component {
 
 
         this.state.experimentOneResults.map(function (obj) {
-
+            console.log(obj);
             let ret = {};
             if (obj.answer === "/b/") {
 
                 for (let i in d) {
                     if (d[i].hasOwnProperty(obj.sound1.id)) {
+                        console.log("Incrementing");
                         d[i][obj.sound1.id] += 1;
                     }
                 }
@@ -164,7 +166,7 @@ class App extends Component {
                 vot = vot.replace("/", "");
                 vot = vot.replace("pi", "");
                 // ret.vot = Number(vot) * 100;
-
+                console.log(vot);
 
                 d[Number(vot) - 1]++;
                 return vot

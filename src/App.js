@@ -181,7 +181,7 @@ class App extends Component {
             return {answer: (Number(d[obj]/self.props.experimentOneRepetitions) * 100), vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10}
         });
         console.log(data);
-        return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center">
 
                 <LineChart width={400} height={400} data={data}>
                     <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
@@ -209,12 +209,12 @@ class App extends Component {
            return obj;
         });
         console.log(final);
-        return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center">
 
             <LineChart width={400} height={400} data={final}>
                 <Line type="monotone" dataKey="data" stroke="#8884d8"/>
                 <CartesianGrid stroke="#ccc"/>
-                <XAxis dataKey="pair" label="Pair" name="Pair" type="number" domain={[1,8]}/>
+                <XAxis dataKey="pair" label="Pair" name="Pair" type="number" domain={[0,10]} tickCount="10"/>
                 <YAxis dataKey="data" type="number" label="data" domain={[0,100]}/>
 
             </LineChart>

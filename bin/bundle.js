@@ -29662,7 +29662,7 @@ var App = function (_Component) {
             console.log(data);
             return _react2.default.createElement(
                 'div',
-                { className: 'col-md-6 col-lg-6 col-sm-12 col-xs-12' },
+                { className: 'col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center' },
                 _react2.default.createElement(
                     _recharts.LineChart,
                     { width: 400, height: 400, data: data },
@@ -29700,13 +29700,13 @@ var App = function (_Component) {
             console.log(final);
             return _react2.default.createElement(
                 'div',
-                { className: 'col-md-6 col-lg-6 col-sm-12 col-xs-12' },
+                { className: 'col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center' },
                 _react2.default.createElement(
                     _recharts.LineChart,
                     { width: 400, height: 400, data: final },
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'data', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number', domain: [1, 8] }),
+                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number', domain: [0, 10], tickCount: '10' }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number', label: 'data', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
@@ -30176,7 +30176,7 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '10', fileSuffix: '.wav', experimentTwoRepetitions: '10', logo: './logo.svg' }), document.getElementById('root'));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, { soundPrefix: 'pi', numSounds: '10', experimentOneRepetitions: '2', fileSuffix: '.wav', experimentTwoRepetitions: '2', logo: './logo.svg' }), document.getElementById('root'));
 
 /***/ }),
 /* 293 */

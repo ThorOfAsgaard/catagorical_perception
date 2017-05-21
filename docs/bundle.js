@@ -29633,11 +29633,14 @@ var App = function (_Component) {
             });
 
             this.state.experimentOneResults.map(function (obj) {
-                console.log(obj);
+                console.log(obj.answer);
                 var ret = {};
+
                 if (obj.answer === "/b/") {
+                    console.log("Got a b response");
 
                     for (var i in d) {
+                        console.log(d[i]);
                         if (d[i].hasOwnProperty(obj.sound1.id)) {
                             console.log("Incrementing");
                             d[i][obj.sound1.id] += 1;
@@ -29652,12 +29655,14 @@ var App = function (_Component) {
 
                     d[Number(vot) - 1]++;
                     return vot;
-                } else {}
+                } else {
+                    console.log("Got a p response");
+                }
             });
             var data = d.map(function (obj, index) {
 
-                console.log(obj);
-                return { answer: Number(d[obj] / self.props.experimentOneRepetitions) * 100, vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10 };
+                // return {answer: (Number(d[obj]/self.props.experimentOneRepetitions) * 100), vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10}
+                return { answer: Number(d[obj] / self.props.experimentOneRepetitions) * 100, vot: Number(index + 1), label: (Number(index) + 1) * 10 };
             });
             console.log(data);
             return _react2.default.createElement(
@@ -29668,7 +29673,7 @@ var App = function (_Component) {
                     { width: 400, height: 400, data: data },
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'answer', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'vot', label: 'VOT', name: 'VOT', domain: [1, 10] }),
+                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'vot', label: 'VOT', name: 'VOT', domain: [0, 10] }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'answer', label: 'Number of /pi/ responses', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
@@ -29688,8 +29693,6 @@ var App = function (_Component) {
         key: 'experimentTwoChart',
         value: function experimentTwoChart() {
             var self = this;
-
-            console.log(this.state.experimentTwoArray);
             var final = this.state.experimentTwoArray.map(function (num, index) {
                 console.log(num);
                 var obj = {};
@@ -29697,7 +29700,6 @@ var App = function (_Component) {
                 obj.data = num / self.props.experimentTwoRepetitions * 100;
                 return obj;
             });
-            console.log(final);
             return _react2.default.createElement(
                 'div',
                 { className: 'col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center' },
@@ -29706,7 +29708,7 @@ var App = function (_Component) {
                     { width: 400, height: 400, data: final },
                     _react2.default.createElement(_recharts.Line, { type: 'monotone', dataKey: 'data', stroke: '#8884d8' }),
                     _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number', domain: [0, 10], tickCount: '10' }),
+                    _react2.default.createElement(_recharts.XAxis, { dataKey: 'pair', label: 'Pair', name: 'Pair', type: 'number', domain: [1, 8], tickCount: '8' }),
                     _react2.default.createElement(_recharts.YAxis, { dataKey: 'data', type: 'number', label: 'data', domain: [0, 100] })
                 ),
                 _react2.default.createElement(
@@ -29718,7 +29720,7 @@ var App = function (_Component) {
                 _react2.default.createElement(
                     'span',
                     { className: 'center' },
-                    'Stimulus Pair'
+                    'Stimulus pair'
                 )
             );
         }

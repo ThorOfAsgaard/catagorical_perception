@@ -151,11 +151,14 @@ class App extends Component {
 
 
         this.state.experimentOneResults.map(function (obj) {
-            console.log(obj);
+            console.log(obj.answer);
             let ret = {};
+
             if (obj.answer === "/b/") {
+                console.log("Got a b response");
 
                 for (let i in d) {
+                    console.log(d[i]);
                     if (d[i].hasOwnProperty(obj.sound1.id)) {
                         console.log("Incrementing");
                         d[i][obj.sound1.id] += 1;
@@ -171,14 +174,16 @@ class App extends Component {
                 d[Number(vot) - 1]++;
                 return vot
             } else {
+                console.log("Got a p response");
 
             }
 
         });
         let data = d.map(function (obj, index) {
 
-            console.log(obj);
-            return {answer: (Number(d[obj]/self.props.experimentOneRepetitions) * 100), vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10}
+
+            // return {answer: (Number(d[obj]/self.props.experimentOneRepetitions) * 100), vot: Number(index + 1) * 10, label: (Number(index) + 1) * 10}
+            return {answer: (Number(d[obj]/self.props.experimentOneRepetitions) * 100), vot: Number(index + 1), label: (Number(index) + 1) * 10}
         });
         console.log(data);
         return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center">
@@ -186,7 +191,8 @@ class App extends Component {
                 <LineChart width={400} height={400} data={data}>
                     <Line type="monotone" dataKey="answer" stroke="#8884d8"/>
                     <CartesianGrid stroke="#ccc"/>
-                    <XAxis dataKey="vot" label="VOT" name="VOT" domain={[1,10]}/>
+                    <XAxis dataKey="vot" label="VOT" name="VOT"  domain={[0,10]}/>
+
                     <YAxis dataKey="answer" label="Number of /pi/ responses" domain={[0,100]}/>
                 </LineChart>
                 <span className="pull-left vertical-text">Percentage of /b/ responses</span>
@@ -199,8 +205,6 @@ class App extends Component {
 
     experimentTwoChart() {
         let self = this;
-
-        console.log(this.state.experimentTwoArray);
         let final = this.state.experimentTwoArray.map(function(num, index) {
             console.log(num);
            let obj = {};
@@ -208,22 +212,20 @@ class App extends Component {
            obj.data = (num / self.props.experimentTwoRepetitions) * 100;
            return obj;
         });
-        console.log(final);
         return (<div className="col-md-6 col-lg-6 col-sm-12 col-xs-12 text-center">
 
             <LineChart width={400} height={400} data={final}>
                 <Line type="monotone" dataKey="data" stroke="#8884d8"/>
                 <CartesianGrid stroke="#ccc"/>
-                <XAxis dataKey="pair" label="Pair" name="Pair" type="number" domain={[0,10]} tickCount="10"/>
+                <XAxis dataKey="pair" label="Pair" name="Pair" type="number" domain={[1,8]} tickCount="8"/>
                 <YAxis dataKey="data" type="number" label="data" domain={[0,100]}/>
-
             </LineChart>
             <span className="pull-left vertical-text">percentage of correct discrimination</span>
             <br />
             {/*<p className="vertical-text">*/}
                 {/*Percentage of correct discrimination*/}
             {/*</p>*/}
-            <span className="center">Stimulus Pair</span>
+            <span className="center">Stimulus pair</span>
 
 
 
